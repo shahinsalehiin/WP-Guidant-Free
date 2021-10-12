@@ -1,0 +1,1360 @@
+/*------------------------------------------------------------------
+Project: WP Guidant Frontend
+Version: 1.0
+-------------------------------------------------------------------*/
+
+/* Index of CSS
+==================================================
+1. Global Styles
+2. Header
+3. Body
+4. Create Guide Page
+5. Filter Page
+6. Card Finter Settings Page
+7. All Cards Page
+*/
+
+
+
+/* ==== 1. Global styles ==== */
+
+@import url('//fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+.guidant-main {
+    background: #F9FAFB;
+    margin-left: -20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+.guidant-main h3,
+.guidant-main h4 {
+    font-weight: 600;
+}
+
+.guidant-main input[type="text"]:focus,
+.guidant-main textarea:focus,
+.guidant-main input[type="number"]:focus{
+    border: 1px solid #c4bebe;
+    box-shadow: none;
+}
+
+.guidant-main select option {
+    outline: none;
+}
+
+.guidant-main select:focus {
+    box-shadow: none;
+    border-color: #CECECE;
+}
+
+.guidant-main select:hover {
+    color: #555555;
+}
+
+/* ==== 2. Header ==== */
+
+.guidant-header {
+    background: #FFFFFF;
+    padding: 12px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.guidant-logo {
+    width: 30px;
+    height: 30px;
+}
+
+.guidant-top-menu ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+.guidant-top-menu ul li {
+    display: inline-block;
+    margin-bottom: 0px;
+}
+
+.guidant-top-menu ul li a {
+    color: #2C3338;
+    text-decoration: none;
+    padding: 18px 15px;
+    position: relative;
+    font-size: 13px;
+    font-weight: 500;
+    outline: none;
+}
+.guidant-top-menu ul li a.pro {
+    color: #ffffff;
+    background: #DE5819;
+}
+.guidant-top-menu ul li:hover a.pro {
+    background: #ca490b;
+}
+.guidant-top-menu ul li a.active {
+    border-bottom: 2px solid #DE5819;
+    color: #DE5819;
+}
+.guidant-top-menu ul li a:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+/* ==== 3. Body ==== */
+
+.guidant-body-wrap {
+    padding: 20px 30px 30px 30px;
+    min-height: calc(100vh - 200px);
+    background: #fff;
+}
+
+.guidant-body-title {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #CFCFCF;
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+    align-items: center;
+    line-height: 34px;
+}
+
+.guidant-body-title .guidant_header_form{
+    display: flex;
+}
+
+.guidant-body-title select {
+    border-color: #CECECE;
+    height: 51px;
+    max-width: 250px;
+    min-width: 250px;
+    display: block;
+    color: #555555;
+    margin-right: 10px;
+}
+
+.guidant-btn {
+    padding: 13px 15px;
+    background: #DE5819;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.guidant-btn:hover{
+    background: #c44b13;
+}
+
+.guidant-btn-sm {
+    padding: 10px 12px;
+    background: #DE5819;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.guidant-btn-sm:hover{
+    background: #c44b13;
+}
+
+.guidant-body-title h3 {
+    color: #1D2327;
+    font-size: 24px;
+    margin: 0px;
+    margin-top: -8px;
+    font-weight: 600;
+}
+
+
+
+/* ------------ Breadcrumb Style ----------- */
+.guidant-breadcrumb-container{
+    padding: 12px 30px;
+}
+ul.guidant-breadcrumb {
+    list-style: none;
+}
+ul.guidant-breadcrumb li {
+    display: inline;
+    font-size: 15px;
+}
+ul.guidant-breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+ul.guidant-breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+}
+ul.guidant-breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+}
+
+
+/* ------------ Loader Block Style ----------- */
+
+.guidant_loader_block{
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.guidant_loader_block .loader {
+    border: 6px solid #ffffff;
+    border-radius: 50%;
+    border-top: 6px solid #DE5819;
+    width: 60px;
+    height: 60px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+/* ------------ Empty Block Style ----------- */
+.guidant_empty_style_1 {
+    width: 506px;
+    margin: auto;
+    text-align: center;
+    background: #F9FAFB;
+    padding: 70px 0px;
+    border-radius: 3px;
+    border: 1px solid #E9E9E9;
+    margin-top: 43px;
+    display: none;
+}
+.guidant_empty_style_1 h3 {
+    font-size: 22px;
+    margin-top: 0px;
+}
+.guidant_empty_style_2 {
+    width: 506px;
+    margin: auto;
+    text-align: center;
+    background: #ffffff;
+    padding: 70px 0px;
+    border-radius: 3px;
+    border: 1px solid #E9E9E9;
+    margin-top: 43px;
+    display: none;
+}
+.guidant_empty_style_2 h3 {
+    font-size: 22px;
+    margin-top: 0px;
+}
+
+
+
+
+/* ------------ License Design ----------- */
+.license_info_block{
+    margin: 8px 0px;
+}
+
+.license_info_block .license_info_title{
+    display: inline-block;
+    width: 200px;
+    font-size: 13px;
+    color: #222222;
+}
+
+.license_info_block .license_info_value{
+    font-size: 13px;
+    color: #222222;
+}
+
+
+
+/* ------------ Block Style ----------- */
+.guidant_block_1 {
+    background: #F9FAFB;
+    border: 1px solid #E9E9E9;
+    border-radius: 3px;
+    padding: 20px 25px 23px;
+}
+
+
+
+/* ------------ Form Style ----------- */
+
+.guidant_form_group label {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 15px;
+    color: #585858;
+    font-weight: 500;
+    margin-top: 30px;
+}
+
+.guidant_form_group label a{
+    margin-left: 4px;
+}
+
+.guidant_form_group label a img{
+    width: 12px;
+    height: 12px;
+}
+
+.guidant_form_group .w-flex {
+    display: flex;
+    align-items: center;
+}
+
+.guidant_form_group .w-flex .del_option{
+    cursor: pointer;
+    padding: 10px;
+    font-weight: 700;
+    font-size: 13px;
+    color: #DE5819;
+}
+
+
+.guidant_form_group p.guidant_field_error {
+    display: none;
+    font-size: 12px;
+    color: #d71b1b;
+    margin: 0;
+}
+
+.guidant_form_group input {
+    width: 100%;
+    border: 1px solid #CECECE;
+    height: 50px;
+    padding: 0px 20px;
+}
+
+.guidant_form_group select {
+    border-color: #CECECE;
+    height: 51px;
+    width: 100%;
+    display: block;
+    max-width: 100%;
+    color: #555555;
+}
+
+
+.guidant_form_group .select2-container .select2-selection--single{
+    height: 51px;
+}
+.guidant_form_group .select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 51px;
+}
+.guidant_form_group .select2-container .select2-selection--single .select2-selection__arrow {
+    height: 51px;
+}
+
+
+
+.guidant_form_group textarea {
+    width: 100%;
+    border: 1px solid #CECECE;
+    height: 50px;
+    padding: 20px;
+    margin-bottom: 30px;
+    min-height: 200px;
+}
+
+
+/*  Card Image */
+.guidant_form_group .guidant-img-field-container {
+    background: #fff;
+    border: 1px solid #CECECE;
+    display: flex;
+    padding: 37px 24px;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 26px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.guidant_form_group .guidant-img-field-container img {
+    height: 68px;
+    width: 68px;
+}
+
+.guidant_form_group .guidant-img-field-container span {
+    color: #fff;
+    background: #DE5819;
+    border-radius: 3px;
+    font-size: 10px;
+    width: 70px;
+    height: 19px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+/* ------------ Form Style Small Fields ----------- */
+
+.guidant_form_group_small {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+
+
+.guidant_form_group_small.pro_field input{
+    pointer-events: none;
+    background: #f5f5f5;
+}
+.guidant_form_group_small.pro_field h4 {
+    color: #979899;
+}
+.guidant_form_group_small.pro_field label {
+    color: #979899;
+}
+
+.guidant_form_group_small.pro_field .guidant-px {
+    color: #979899;
+}
+
+.guidant_form_group_small.pro_field .guidant-guiduploadimg-text {
+    color: #222222;
+    background: #e3e2e2;
+}
+
+.guidant_form_group_small.pro_field .pro_tag {
+    color: #DE5819;
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+
+
+
+
+.guidant_form_group_small h4 {
+    color: #585858;
+    font-size: 15px;
+    font-weight: 500;
+    width: 205px;
+    margin: 0px;
+}
+
+.guidant_form_group_small.wider_space h4 {
+    width: 265px;
+}
+
+.guidant_form_group_small label {
+    color: #000000;
+    margin-left: 22px;
+    font-size: 14px;
+    position: relative;
+}
+
+.guidant_form_group_small .guidant-color-container {
+    border: 1px solid #CECECE;
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+    width: 174px;
+    height: 36px;
+}
+
+
+.guidant_form_group_small .guidant-color-container input[type="color"] {
+    -webkit-appearance: none;
+    border: none;
+    box-shadow: none !important;
+    padding: 0px;
+    height: 36px;
+    width: 52px;
+    margin: 0px;
+    border-radius: 3px;
+    cursor: pointer;
+
+}
+
+.guidant_form_group_small .guidant-color-container input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+.guidant_form_group_small .guidant-color-container input[type="color"]::-webkit-color-swatch {
+    border-color: transparent;
+    border-radius: 3px;
+}
+
+.guidant_form_group_small input,
+.guidant_form_group_small select {
+    border-color: #CECECE;
+    width: 105px;
+    height: 43px;
+    outline: none;
+    font-size: 16px;
+    color: #555555;
+}
+
+.guidant_form_group_small input[type="text"]{
+    width: 174px;
+}
+
+.guidant_form_group_small .guidant-px {
+    margin-left: 8px;
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    font-size: 16px;
+}
+
+
+/*  Upload Image  */
+.guidant_form_group_small .guidant-card-guiduploadimg {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    cursor: pointer;
+}
+
+.guidant_form_group_small .guidant-card-guiduploadimg img {
+    width: 50px;
+    height: 50px;
+}
+
+.guidant_form_group_small .guidant-guiduploadimg-text {
+    color: #fff;
+    background: #DE5819;
+    border-radius: 3px;
+    font-size: 10px;
+    width: 70px;
+    height: 19px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+/* ------------ Tab Page Style ----------- */
+.guidant_tab_menu {
+    width: 207px;
+    position: absolute;
+    background: #F9FAFB;
+    padding-top: 6px;
+    padding-bottom: 20px;
+}
+.guidant_tab_menu li {
+    padding: 25px 0px 27px 33px;
+    background: #F9FAFB;
+    margin-bottom: 0px;
+    color: #1D2327;
+    font-weight: 600;
+    transition: .4s ease;
+    cursor: pointer;
+    position: relative;
+}
+.guidant_tab_menu li:after {
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 0%;
+    left: 0px;
+    top: 0;
+    background-color: #DE5819;
+    transition: .3s ease;
+}
+.guidant_tab_menu li:hover:after {
+    height: 100%;
+    transition: .3s ease;
+}
+.guidant_tab_menu li.active {
+    background-color: #fff;
+}
+.guidant_tab_menu li:hover {
+    background-color: #fff;
+}
+.guidant_tab_menu li.active:after {
+    height: 100%;
+}
+
+
+
+.guidant_tab_body {
+    width: calc(100% - 240px);
+    position: relative;
+    left: 240px;
+}
+.guidant_tab_body .guidant_tab_item {
+    display: none;
+    border: 1px solid #E9E9E9;
+    background: #F9FAFB;
+    border-radius: 3px;
+    min-height: calc(100vh - 450px);
+    margin-bottom: 34px;
+    padding: 20px;
+}
+.guidant_tab_body .guidant_tab_item.active {
+    display: block;
+    animation: tab_item_fade .5s ease-in;
+}
+@keyframes tab_item_fade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+
+
+/* ------------ Card Style Custom Fields ----------- */
+
+.guidant_card_style_custom_fields {
+    display: flex;
+    align-items: center;
+    background: #F9FAFB;
+    border: 1px solid #E9E9E9;
+    padding: 40px 40px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+}
+
+.guidant_card_style_custom_fields .guidant_field_info {
+    margin: 0px;
+    max-width: 250px;
+    min-width: 250px;
+}
+.guidant_card_style_custom_fields .guidant_field_info span{
+    font-size: 12px;
+    color: #44464a;
+    font-style: italic;
+}
+.guidant_card_style_custom_fields .guidant_field_info p {
+    margin: 0;
+    font-size: 16px;
+    color: #1D2327;
+}
+
+
+
+.guidant_card_style_custom_fields .guidant_placement_info {
+    margin-left: 75px;
+}
+.guidant_card_style_custom_fields .guidant_placement_info span{
+    font-size: 12px;
+    color: #44464a;
+    font-style: italic;
+}
+.guidant_card_style_custom_fields .guidant_placement_info p{
+    display: block;
+    color: #DE5819;
+    text-decoration: none;
+    font-size: 13px;
+    margin: 0;
+}
+
+
+
+.guidant_card_style_custom_fields .guidant_card_action {
+    margin-left: auto;
+}
+.guidant_card_style_custom_fields .guidant_card_action a {
+    width: 33px;
+    height: 33px;
+    margin-right: 7px;
+    display: inline-block;
+    border-radius: 4px;
+    line-height: 35px;
+    text-align: center;
+}
+.guidant_card_style_custom_fields .guidant_card_action a img{
+    width: 16px;
+    height: 16px;
+}
+.guidant_card_style_custom_fields .guidant-view-icon {
+    background: #DEF7FD;
+}
+.guidant_card_style_custom_fields .guidant-edit-icon {
+    background: #D4DDFE;
+}
+.guidant_card_style_custom_fields .guidant-trash-icon {
+    background: #FFDBDF;
+}
+
+
+
+
+
+/* ------------ Card Style Submission ----------- */
+
+.guidant_card_style_submission {
+    display: flex;
+    align-items: center;
+    background: #F9FAFB;
+    border: 1px solid #E9E9E9;
+    padding: 40px 40px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+}
+
+.guidant_card_style_submission .guidant_guide_info {
+    margin: 0px;
+    max-width: 250px;
+    min-width: 250px;
+}
+.guidant_card_style_submission .guidant_guide_info span{
+    font-size: 12px;
+    color: #44464a;
+    font-style: italic;
+}
+.guidant_card_style_submission .guidant_guide_info p {
+    margin: 0;
+    font-size: 16px;
+    color: #1D2327;
+}
+
+
+
+.guidant_card_style_submission .guidant_user_info {
+    margin-left: 75px;
+    max-width: 250px;
+    min-width: 250px;
+}
+.guidant_card_style_submission .guidant_user_info span{
+    display: block;
+    font-size: 12px;
+    color: #44464a;
+    font-style: italic;
+}
+.guidant_card_style_submission .guidant_user_info a{
+    display: inline-block;
+    color: #DE5819;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+
+
+
+
+.guidant_card_style_submission .guidant_time_info {
+    margin-left: 75px;
+    max-width: 250px;
+    min-width: 250px;
+}
+.guidant_card_style_submission .guidant_time_info span{
+    font-size: 12px;
+    color: #44464a;
+    font-style: italic;
+}
+.guidant_card_style_submission .guidant_time_info a{
+    display: block;
+    color: #DE5819;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+
+
+.guidant_card_style_submission .guidant_card_action {
+    margin-left: auto;
+}
+.guidant_card_style_submission .guidant_card_action a {
+    width: 33px;
+    height: 33px;
+    margin-right: 7px;
+    display: inline-block;
+    border-radius: 4px;
+    line-height: 35px;
+    text-align: center;
+}
+.guidant_card_style_submission .guidant_card_action a img{
+    width: 16px;
+    height: 16px;
+}
+.guidant_card_style_submission .guidant-view-icon {
+    background: #DEF7FD;
+}
+.guidant_card_style_submission .guidant-edit-icon {
+    background: #D4DDFE;
+}
+.guidant_card_style_submission .guidant-trash-icon {
+    background: #FFDBDF;
+}
+
+
+
+
+
+/* ------------ Card Style Guide ----------- */
+
+.guidant_card_style_guide {
+    display: flex;
+    align-items: center;
+    background: #F9FAFB;
+    border: 1px solid #E9E9E9;
+    padding: 40px 40px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+}
+
+.guidant_card_style_guide .guidant_guide_info {
+    margin: 0px;
+    max-width: 250px;
+    min-width: 250px;
+}
+.guidant_card_style_guide .guidant_guide_info span{
+    font-size: 12px;
+    color: #44464a;
+    font-style: italic;
+}
+.guidant_card_style_guide .guidant_guide_info p {
+    margin: 0;
+    font-size: 16px;
+    color: #1D2327;
+}
+
+
+
+.guidant_card_style_guide .guidant_shortcode_info {
+    margin-left: 75px;
+}
+.guidant_card_style_guide .guidant_shortcode_info span{
+    font-size: 12px;
+    color: #44464a;
+    font-style: italic;
+}
+.guidant_card_style_guide .guidant_shortcode_info a{
+    display: block;
+    color: #DE5819;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+
+.guidant_card_style_guide a.shortcode {
+
+}
+.guidant_card_style_guide .guidant_card_action {
+    margin-left: auto;
+}
+.guidant_card_style_guide .guidant_card_action a {
+    width: 33px;
+    height: 33px;
+    margin-right: 7px;
+    display: inline-block;
+    border-radius: 4px;
+    line-height: 35px;
+    text-align: center;
+}
+.guidant_card_style_guide .guidant_card_action a img{
+    width: 16px;
+    height: 16px;
+}
+.guidant_card_style_guide .guidant-view-icon {
+    background: #DEF7FD;
+}
+.guidant_card_style_guide .guidant-edit-icon {
+    background: #D4DDFE;
+}
+.guidant_card_style_guide .guidant-trash-icon {
+    background: #FFDBDF;
+}
+
+
+
+
+
+
+/* ------------ Card Style Filter ----------- */
+
+.guidant_card_style_filter {
+    display: flex;
+    align-items: center;
+    background: #F9FAFB;
+    border: 1px solid #E9E9E9;
+    padding: 40px 40px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+    cursor: grab;
+}
+
+.guidant_card_style_filter .guidant_guide_info {
+    margin: 0px;
+    max-width: 250px;
+    min-width: 250px;
+}
+.guidant_card_style_filter .guidant_guide_info span{
+    font-size: 12px;
+    color: #44464a;
+    font-style: italic;
+}
+.guidant_card_style_filter .guidant_guide_info p {
+    margin: 0;
+    font-size: 16px;
+    color: #1D2327;
+}
+
+
+
+.guidant_card_style_filter .guidant_filter_info {
+    margin-left: 75px;
+}
+.guidant_card_style_filter .guidant_filter_info span{
+    font-size: 12px;
+    color: #44464a;
+    font-style: italic;
+}
+.guidant_card_style_filter .guidant_filter_info p{
+    display: block;
+    color: #DE5819;
+    text-decoration: none;
+    font-size: 13px;
+    margin: 0;
+}
+
+
+
+.guidant_card_style_filter .guidant_card_action {
+    margin-left: auto;
+}
+.guidant_card_style_filter .guidant_card_action a {
+    width: 33px;
+    height: 33px;
+    margin-right: 7px;
+    display: inline-block;
+    border-radius: 4px;
+    line-height: 35px;
+    text-align: center;
+}
+.guidant_card_style_filter .guidant_card_action a img{
+    width: 16px;
+    height: 16px;
+}
+.guidant_card_style_filter .guidant-view-icon {
+    background: #DEF7FD;
+}
+.guidant_card_style_filter .guidant-edit-icon {
+    background: #D4DDFE;
+}
+.guidant_card_style_filter .guidant-trash-icon {
+    background: #FFDBDF;
+}
+
+
+
+
+/* ------------ Card Style Element ----------- */
+
+.guidant_card_style_element {
+    display: flex;
+    align-items: center;
+    background: #F9FAFB;
+    border: 1px solid #E9E9E9;
+    padding: 40px 40px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+    cursor: grab;
+}
+
+.guidant_card_style_element .guidant_element_info {
+    margin: 0px;
+    max-width: 250px;
+    min-width: 250px;
+}
+.guidant_card_style_element .guidant_element_info span{
+    font-size: 12px;
+    color: #44464a;
+    font-style: italic;
+}
+.guidant_card_style_element .guidant_element_info p {
+    margin: 0;
+    font-size: 16px;
+    color: #1D2327;
+}
+
+
+
+.guidant_card_style_element .guidant_condition_info {
+    margin-left: 75px;
+}
+.guidant_card_style_element .guidant_condition_info span{
+    font-size: 12px;
+    color: #44464a;
+    font-style: italic;
+}
+.guidant_card_style_element .guidant_condition_info p{
+    display: block;
+    color: #DE5819;
+    text-decoration: none;
+    font-size: 13px;
+    margin: 0;
+}
+
+
+
+.guidant_card_style_element .guidant_card_action {
+    margin-left: auto;
+}
+.guidant_card_style_element .guidant_card_action a {
+    width: 33px;
+    height: 33px;
+    margin-right: 7px;
+    display: inline-block;
+    border-radius: 4px;
+    line-height: 35px;
+    text-align: center;
+}
+.guidant_card_style_element .guidant_card_action a img{
+    width: 16px;
+    height: 16px;
+}
+.guidant_card_style_element .guidant-view-icon {
+    background: #DEF7FD;
+}
+.guidant_card_style_element .guidant-edit-icon {
+    background: #D4DDFE;
+}
+.guidant_card_style_element .guidant-trash-icon {
+    background: #FFDBDF;
+}
+
+
+
+/* ------------ Card Style 1 ----------- */
+
+.guidant_card_style_1 {
+    display: flex;
+    align-items: center;
+    background: #F9FAFB;
+    border: 1px solid #E9E9E9;
+    padding: 64px 40px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+}
+.guidant_card_style_1 p {
+    margin: 0px;
+    font-size: 16px;
+    color: #1D2327;
+    margin-top: -2px;
+}
+.guidant_card_style_1 span {
+    background: #FFEBE2;
+    color: #DE5819;
+    padding: 4px 12px;
+    border-radius: 4px;
+    margin-left: 75px;
+    font-size: 13px;
+}
+.guidant_card_style_1 .guidant_card_action {
+    margin-left: auto;
+}
+.guidant_card_style_1 .guidant_card_action a {
+    width: 33px;
+    height: 33px;
+    margin-right: 7px;
+    display: inline-block;
+    border-radius: 4px;
+    line-height: 35px;
+    text-align: center;
+}
+.guidant_card_style_1 .guidant_card_action a img{
+    width: 16px;
+    height: 16px;
+}
+.guidant_card_style_1 .guidant-view-icon {
+    background: #DEF7FD;
+}
+.guidant_card_style_1 .guidant-edit-icon {
+    background: #D4DDFE;
+}
+.guidant_card_style_1 .guidant-trash-icon {
+    background: #FFDBDF;
+}
+
+
+/* ------------ Card Style Results ----------- */
+
+.guidant_card_style_results {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #E9E9E9;
+    padding: 30px 40px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+    cursor: grab;
+}
+.guidant_card_style_results p {
+    margin: 0px;
+    font-size: 16px;
+    color: #1D2327;
+    margin-top: -2px;
+}
+.guidant_card_style_results .guidant_card_action {
+    margin-left: auto;
+}
+.guidant_card_style_results .guidant_card_action a {
+    width: 33px;
+    height: 33px;
+    margin-right: 7px;
+    display: inline-block;
+    border-radius: 4px;
+    line-height: 35px;
+    text-align: center;
+}
+.guidant_card_style_results .guidant_card_action a img{
+    width: 16px;
+    height: 16px;
+}
+.guidant_card_style_results .guidant-edit-icon {
+    background: #D4DDFE;
+}
+.guidant_card_style_results .guidant-trash-icon {
+    background: #FFDBDF;
+}
+
+
+
+/* ------------ Card Style 2 ----------- */
+
+.guidant_card_style_2 {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #E9E9E9;
+    padding: 30px 40px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+}
+.guidant_card_style_2 p {
+    margin: 0px;
+    font-size: 16px;
+    color: #1D2327;
+    margin-top: -2px;
+}
+.guidant_card_style_2 .guidant_card_action {
+    margin-left: auto;
+}
+.guidant_card_style_2 .guidant_card_action a {
+    width: 33px;
+    height: 33px;
+    margin-right: 7px;
+    display: inline-block;
+    border-radius: 4px;
+    line-height: 35px;
+    text-align: center;
+}
+.guidant_card_style_2 .guidant_card_action a img{
+    width: 16px;
+    height: 16px;
+}
+.guidant_card_style_2 .guidant-edit-icon {
+    background: #D4DDFE;
+}
+.guidant_card_style_2 .guidant-trash-icon {
+    background: #FFDBDF;
+}
+
+
+
+/* ------------ Modals ----------- */
+
+#guidant_conditions_create, #guidant_conditions_update,
+#guidant_custom_field_create, #guidant_fields_update,
+#guidant_results_create, #guidant_results_update,
+#guidant_single_submission,
+#guidant_logic_create, #guidant_logic_update,
+#guidant_popup_pro{
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 0;
+    left: -20px;
+    width: calc(100% + 20px);
+    height: 100%;
+    z-index: 1;
+}
+
+@keyframes animatemodal {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+    to {
+        top: 50%;
+        opacity: 1;
+    }
+}
+
+@keyframes animatemodalpro {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+    to {
+        top: 30%;
+        opacity: 1;
+    }
+}
+
+.guidant-modal {
+    width: calc(100% - 43.5%);
+    background: #fff;
+    padding: 47px 45px 50px;
+    border-radius: 10px;
+    border: 1px solid #E9E9E9;
+    animation-name: animatemodal;
+    animation-duration: 0.4s;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+}
+
+.guidant-modalheader {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #CFCFCF;
+    margin-bottom: 38.5px;
+}
+
+.guidant-modalheader h3 {
+    margin: 0px;
+    color: #DE5819;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.guidant-modalheader span {
+    color: #BBBBBB;
+    font-size: 28px;
+    margin-top: -8px;
+    cursor: pointer;
+}
+
+.guidant-modalheader span:hover {
+    color: #DE5819;
+}
+
+.guidant-modalbody{
+    max-height: calc(100vh - 310px);
+    overflow-y: auto;
+}
+
+.guidant-modalform {
+    border: 1px solid #E9E9E9;
+    background: #F9FAFB;
+    padding: 20px 25px 20px 25px;
+    border-radius: 3px;
+    margin-bottom: 30px;
+}
+
+
+
+
+
+.guidant_modal_pro {
+    width: 320px;
+    background: #fff;
+    padding: 30px 25px;
+    border-radius: 2px;
+    border: 1px solid #E9E9E9;
+    animation-name: animatemodalpro;
+    animation-duration: 0.4s;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+.guidant_modal_pro h3 {
+    display: inline;
+    margin: 0px;
+    color: #222222;
+    font-weight: 600;
+    font-size: 23px;
+    letter-spacing: 0.5px;
+    align-self: center;
+    text-align: center;
+    line-height: 26px;
+}
+
+.guidant_modal_pro a.action {
+    text-decoration: none;
+    display: inline;
+    align-self: center;
+    margin-top: 20px;
+    padding: 13px 30px;
+    background: #DE5819;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.guidant_modal_pro a.close {
+
+    display: inline;
+    color: #8f8e8e;
+    font-size: 15px;
+    margin-top: 20px;
+    cursor: pointer;
+    text-decoration: underline;
+    align-self: center;
+}
+
+
+
+
+#guidant_modal_submission_view {
+    padding: 20px 0px 20px 0px;
+}
+
+
+#guidant_modal_submission_view .modal_submission_single_filter{
+    border: 1px solid #E9E9E9;
+    background: #F9FAFB;
+    border-radius: 3px;
+    margin-bottom: 30px;
+}
+
+#guidant_modal_submission_view .modal_submission_single_filter .filter_into{
+    padding: 7px 10px;
+    border-bottom: 1px solid #CFCFCF;
+}
+#guidant_modal_submission_view .modal_submission_single_filter .filter_into p{
+    color: #333333;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0;
+}
+
+
+
+#guidant_modal_submission_view .modal_submission_single_filter .filter_body{
+    padding: 7px 10px;
+    border-bottom: 1px solid #CFCFCF;
+}
+
+#guidant_modal_submission_view .modal_submission_single_filter .filter_body .check{
+    font-size: 16px;
+    color: #DE5819;
+}
+
+#guidant_modal_submission_view .modal_submission_single_filter .filter_body p{
+    color: #333333;
+    font-weight: 600;
+    font-size: 13px;
+    margin: 0;
+}
