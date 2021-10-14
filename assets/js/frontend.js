@@ -255,6 +255,7 @@ function renderElements(unique_id)
                         var this_element_for_logic = this
                         if (jQuery(this_element_for_logic).hasClass('active')) {
                             logicGuideHideShow(unique_id, jQuery(this_element_for_logic).data('filter_to_hide'), true)
+                            return false;
                         } else {
                             logicGuideHideShow(unique_id, jQuery(this_element_for_logic).data('filter_to_hide'), false)
                         }
@@ -287,6 +288,7 @@ function renderElements(unique_id)
                         var this_element_for_logic = this
                         if (jQuery(this_element_for_logic).hasClass('active')) {
                             logicGuideHideShow(unique_id, jQuery(this_element_for_logic).data('filter_to_hide'), true)
+                            return false;
                         } else {
                             logicGuideHideShow(unique_id, jQuery(this_element_for_logic).data('filter_to_hide'), false)
                         }
