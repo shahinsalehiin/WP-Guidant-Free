@@ -9,7 +9,6 @@ if (!class_exists('GuidantAdminAjax')) {
     class GuidantAdminAjax
     {
 
-        public $licenseObj;
         protected $settings;
         protected $utils;
 
@@ -17,7 +16,6 @@ if (!class_exists('GuidantAdminAjax')) {
         {
             $this->settings = $admin_class->settings;
             $this->utils = $admin_class->utils;
-            $this->licenseObj = $admin_class->licenseObj;
 
             add_action( 'wp_ajax_guidant_reports_list', array($this, 'guidant_reports_list') );
             add_action( 'wp_ajax_guidant_submission_delete', array($this, 'guidant_submission_delete') );
