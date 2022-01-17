@@ -146,3 +146,13 @@ function guidant_copy_txt(element, text) {
     temp.remove();
     alert("Copied")
 }
+
+
+
+function guidant_import_guide(host) {
+    'use strict';
+
+    alert('d')
+
+
+}

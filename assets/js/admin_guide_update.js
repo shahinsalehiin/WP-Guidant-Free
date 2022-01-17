@@ -776,3 +776,11 @@ function guidant_result_delete(host, result_id){
         }
     })
 }
+
+
+
+function guidant_export_guide(host) {
+    'use strict';
+
+    alert('fd')
+}

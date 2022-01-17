@@ -65,7 +65,73 @@ if ( ! class_exists( 'GuidantSettings' ) ) {
             if(!get_option("wpguidant_logic_settings")){
                 update_option( 'wpguidant_logic_settings', $defaultOption );
             }
+
+
+            /* ========= Only for Version 1.0.3 ====== */
+            /* ========= Remove this function on Version 1.0.4 ====== */
+            $this->replaceOldImageIDwithURL();
+
         }
+
+
+
+
+
+        /* ========= Only for Version 1.0.3 ====== */
+        /* ========= Remove this function on Version 1.0.4 ====== */
+        public function replaceOldImageIDwithURL(){
+            $dataGuideSettings = get_option("wpguidant_guide_settings");
+            $dataNewGuideSettings = array();
+            foreach ($dataGuideSettings as $singleSettings){
+                if(isset($singleSettings['key'])){
+                    if($singleSettings['key'] == "guide_background_image"){
+                        if(is_numeric($singleSettings['value'])){
+                            if($singleSettings['value'] == 0){
+                                $singleSettings['value'] = " ";
+                            }else{
+                                $singleSettings['value'] = wp_get_attachment_url($singleSettings['value']);
+                            }
+                        }
+                    }
+                }
+                $dataNewGuideSettings[] = $singleSettings;
+            }
+            update_option( 'wpguidant_guide_settings', $dataNewGuideSettings );
+
+
+            $dataElementSettings = get_option("wpguidant_element_settings");
+            $dataNewElementSettings = array();
+            foreach ($dataElementSettings as $singleSettings){
+                if(isset($singleSettings['key'])){
+                    if($singleSettings['key'] == "card_image"){
+                        if(is_numeric($singleSettings['value'])){
+                            if($singleSettings['value'] == 0){
+                                $singleSettings['value'] = " ";
+                            }else{
+                                $singleSettings['value'] = wp_get_attachment_url($singleSettings['value']);
+                            }
+                        }
+                    }
+
+                    if($singleSettings['key'] == "slider_image"){
+                        if(is_numeric($singleSettings['value'])){
+                            if($singleSettings['value'] == 0){
+                                $singleSettings['value'] = " ";
+                            }else{
+                                $singleSettings['value'] = wp_get_attachment_url($singleSettings['value']);
+                            }
+                        }
+                    }
+                }
+                $dataNewElementSettings[] = $singleSettings;
+            }
+            update_option( 'wpguidant_element_settings', $dataNewElementSettings );
+        }
+
+
+
+
+
 
 
         /* ****************** Guide Logic Operations ****************** */

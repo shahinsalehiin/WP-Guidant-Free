@@ -5,7 +5,7 @@ Tags: guide plugin, wp guidant, guided selling, recommendation, forms
 Requires PHP: 5.6
 Requires at least: 5.1
 Tested up to: 5.8
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -74,6 +74,26 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	<p>The output of the guided selling process can be customized to show the defined values set previously from the admin end. Result attributes can be added, changed, and rearranged by their placement order. </p>
 	</li>
 
+	<li>
+    	<strong>MailChimp Integration</strong>
+    	<p>Connect Mailchimp with created form to automatically save subscribers into Mailchimp Contacts. Manage and Map form fields with Mailchimp Custom Tags to build a powerful contact list for marketing purpose. </p>
+    </li>
+
+    <li>
+        <strong>Popup Builder</strong>
+        <p>Display the whole Guided Selling Process including multiple filters into a Popup. Easy to customize popup handlers and popup design. Popups can be displayed by shortcode, so no matter where it is needed, can be placed.</p>
+    </li>
+
+    <li>
+        <strong>Guide Import/Export</strong>
+        <p>Export guides with it's filters, cards, sliders and form elements and their customization. Powerful guide importing functionality to make a proper duplicate of the exported guide for faster ready-to-go option.</p>
+    </li>
+
+    <li>
+        <strong>Ready-made Templates</strong>
+        <p>10+ ready-made templates you can choose from and create a proper guide with pre-built filters, cards, sliders and form elements and their complete customization with just a click.</p>
+    </li>
+
 </ol>
 
 
@@ -90,6 +110,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	<li><strong>Custom Meta Filtering:</strong> Create compatible guides for any website by filtering target meta values presented by other plugins.</li>
 	<li><strong>Conditional Logic:</strong> Display the next filter based on the user choice in the previous filter, that’s the conditional logic of WP Guidant.</li>
 	<li><strong>Submission Tracking:</strong> Track user behavior through each guide, keep data logs, and build a sales funnel by analyzing the guide data.</li>
+	<li><strong>Email Notification:</strong> Send customized automated email to users on guide completion. Notification via email to admin can also be set.</li>
+	<li><strong>Custom CSS:</strong> Feature to add custom CSS to change the default design of guide, filters, cards, sliders and forms.</li>
+	<li><strong>Auto Redirect on Submission:</strong> Set custom URL to redirect page automatically on guide submission to manage proper flow in necessary.</li>
 	<li><strong>Result:</strong> Results can be displayed/removed at the end of the process including the maximum number of outputs, headline, & completion texts.</li>
 	<li><strong>Result Attributes:</strong> Choose what to display on the result page, including thumbnail, price, category, title, excerpt, etc.</li>
 	<li><strong>WPML:</strong> The plugin supports multilingual websites. Everything on it can be easily converted to the language you speak.</li>
@@ -256,8 +279,12 @@ screenshot-14.png
 
 == Changelog ==
 
+= 1.0.3 =
+1. Compatibility with WP Guidant Pro
+2. Performance Improved
+3. Fixed minor bugs
 
-= 1.0.1 =
+= 1.0.2 =
 Fixed minor code warning
 
 = 1.0.1 =

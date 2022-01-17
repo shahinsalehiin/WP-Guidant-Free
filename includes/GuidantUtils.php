@@ -64,6 +64,7 @@ if ( ! class_exists( 'GuidantUtils' ) ) {
                 $wooCommerceAttributes[] = array("id" => "woocommerce_regular_price", "text" => "[WooCommerce] Regular Price");
                 $wooCommerceAttributes[] = array("id" => "woocommerce_rating", "text" => "[WooCommerce] Rating");
                 $wooCommerceAttributes[] = array("id" => "woocommerce_stock_status", "text" => "[WooCommerce] Stock Status");
+                $wooCommerceAttributes[] = array("id" => "woocommerce_attributes", "text" => "[WooCommerce] Product Attributes");
             }
             return $this->filterBySearch($wooCommerceAttributes, $search);
         }
@@ -286,6 +287,26 @@ if ( ! class_exists( 'GuidantUtils' ) ) {
                     if (sizeof($listPrices) > 0) {
                         foreach ($listPrices as $singlePrice) {
                             $attributeValues[] = array("id" => $singlePrice->stock_status, "text" => $singlePrice->stock_status);
+                        }
+                    }
+                }
+            }
+
+            if($attribute_name == "woocommerce_attributes") {
+                if (class_exists('WooCommerce')) {
+
+                    $sql = $wpdb->prepare( "SELECT attributes.attribute_name as attribute_slug FROM {$wpdb->prefix}woocommerce_attribute_taxonomies as attributes", array() );
+                    $listAttributes = $wpdb->get_results($sql);
+                    if (sizeof($listAttributes) > 0) {
+                        foreach ($listAttributes as $singleAttribute) {
+                            $sql = $wpdb->prepare( "SELECT terms.slug as slug, terms.name as name FROM {$wpdb->prefix}term_taxonomy as ttaxonomy, {$wpdb->prefix}terms as terms WHERE ttaxonomy.taxonomy = 'pa_".$singleAttribute->attribute_slug."'
+                                                    AND terms.term_id = ttaxonomy.term_id AND terms.name LIKE %s GROUP BY terms.term_id LIMIT 10", array( '%'.$search.'%' ) );
+                            $listVariations = $wpdb->get_results($sql);
+                            if (sizeof($listVariations) > 0) {
+                                foreach ($listVariations as $singleVariation) {
+                                    $attributeValues[] = array("id" => $singleVariation->slug, "text" => $singleVariation->name);
+                                }
+                            }
                         }
                     }
                 }

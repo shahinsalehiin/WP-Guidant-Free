@@ -1,7 +1,10 @@
 <div id="guidant_guide_update_tab_page_container" style="display: none; min-height: 800px">
     <div class="guidant-body-title">
         <h3> Guide Settings </h3>
-        <button class="guidant-btn guidant_guide_update_btn" onclick="guidant_guides_update('<?php echo esc_attr(GUIDANT_URL); ?>')">Save Changes</button>
+        <div>
+            <button class="guidant-btn guidant_guide_update_btn" onclick="guidant_guides_update('<?php echo esc_attr(GUIDANT_URL); ?>')">Save Changes</button>
+        </div>
+
     </div>
     <div class="guidant_loader_block guidant-loader" style="display: none;">
         <div class='loader'></div>
@@ -9,7 +12,8 @@
     <div class="guidant-card-setting">
         <div class="guidant_tab_menu">
             <ul>
-                <li> Basic </li>
+                <li> Guide Basic </li>
+                <li> Advanced Settings </li>
                 <li> Guide Design </li>
                 <li> Filter Design </li>
                 <li> Card Design </li>
@@ -33,13 +37,13 @@
                     <p class="guidant_field_error" id="guidant_guides_update_guide_name_empty">Guide Name Can't be Empty</p>
                 </div>
 
-                <div class="guidant_form_group">
-                    <label for="guidant_guides_update_guide_submission_tracking">Submission Report Tracking <?php $this->guidant_field_info("Enable or Disable tracking of how user's are interacting with this guide in the front-end."); ?></label>
+                <!--<div class="guidant_form_group">
+                    <label for="guidant_guides_update_guide_submission_tracking">Submission Report Tracking <?php /*$this->guidant_field_info("Enable or Disable tracking of how user's are interacting with this guide in the front-end."); */?></label>
                     <select id="guidant_guides_update_guide_submission_tracking">
                         <option value="enable">Enable - Track users activity</option>
                         <option value="disable">Disable - Do not track</option>
                     </select>
-                </div>
+                </div>-->
 
                 <div class="guidant_form_group">
                     <label for="guidant_guides_update_guide_title">Guide Title <?php $this->guidant_field_info("Title of your guide, can be empty. Visible in guide front-end design."); ?></label>
@@ -52,6 +56,76 @@
                 </div>
 
             </div>
+
+
+
+
+
+
+
+
+
+
+            <div class="guidant_tab_item">
+
+
+                <div class="guidant_form_group_small wider_space">
+                    <h4> Submission Report Tracking <?php $this->guidant_field_info("Enable or Disable tracking of how user's are interacting with this guide in the front-end."); ?></h4>
+                    <div>
+                        <select id="guidant_guides_update_guide_submission_tracking">
+                            <option value="enable">Enable</option>
+                            <option value="disable">Disable</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="guidant_form_group_small wider_space pro_field">
+                    <h4> Email to User on Submission <?php $this->guidant_field_info("Enable or Disable automatic email sending to user on guide completion."); ?></h4>
+                    <div>
+                        <select id="guidant_guides_update_guide_email_to_user" disabled>
+                            <option value="enable">Enable</option>
+                            <option value="disable">Disable</option>
+                        </select>
+                    </div>
+                    <span class="pro_tag"><strong>Pro</strong></span>
+                </div>
+
+
+
+                <div class="guidant_form_group_small wider_space pro_field">
+                    <h4> Mailchimp Integration </h4>
+                    <div class="guidant-card-api-integration">
+                        <span id="guidant_mailchimp_connect_field_btn" class="guidant-card-api-integration-text-large"> Connect Mailchimp</span>
+                    </div>
+                    <span class="pro_tag"><strong>Pro</strong></span>
+                </div>
+
+
+                <div class="guidant_form_group_small wider_space pro_field">
+                    <h4> Custom CSS </h4>
+                    <div class="guidant-card-api-integration">
+                        <span class="guidant-card-api-integration-text-large"> Add Custom CSS</span>
+                    </div>
+                    <span class="pro_tag"><strong>Pro</strong></span>
+                </div>
+
+                <div class="guidant_form_group_small wider_space pro_field">
+                    <h4> Guide on Popup <?php $this->guidant_field_info("Display guide on popup on button click."); ?></h4>
+                    <div>
+                        <select id="guidant_guides_update_guide_on_popup" disabled>
+                            <option value="enable">Enable</option>
+                            <option value="disable">Disable</option>
+                        </select>
+                    </div>
+                    <span class="pro_tag"><strong>Pro</strong></span>
+                </div>
+
+
+
+            </div>
+
+
 
 
 

@@ -24,7 +24,10 @@
 <div id="guidant_guides_list" style="display: none;">
     <div class="guidant-body-title">
         <h3> All Guides </h3>
-        <button class="guidant-btn" onclick="guidant_guides_create_show('<?php echo esc_attr(GUIDANT_URL); ?>')"> Create Guide</button>
+
+        <div>
+            <button class="guidant-btn" onclick="guidant_guides_create_show('<?php echo esc_attr(GUIDANT_URL); ?>')"> Create Guide</button>
+        </div>
     </div>
     <div class="guidant_loader_block guidant-loader" style="display: none;">
         <div class='loader'></div>

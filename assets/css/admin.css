@@ -106,7 +106,7 @@ Version: 1.0
 
 .guidant-body-wrap {
     padding: 20px 30px 30px 30px;
-    min-height: calc(100vh - 200px);
+    min-height: 100vh;
     background: #fff;
 }
 
@@ -161,6 +161,23 @@ Version: 1.0
 .guidant-btn-sm:hover{
     background: #c44b13;
 }
+
+.guidant-btn-light {
+    padding: 13px 15px;
+    background: #eeeeee;
+    color: #333;
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 600;
+    position: relative;
+}
+.guidant-btn-light:hover{
+    background: #e5e4e4;
+}
+
+
 
 .guidant-body-title h3 {
     color: #1D2327;
@@ -541,6 +558,42 @@ ul.guidant-breadcrumb li a:hover {
     text-align: center;
     text-transform: capitalize;
 }
+
+
+
+
+/*  API Integration  */
+.guidant_form_group_small .guidant-card-api-integration {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    cursor: pointer;
+}
+
+.guidant_form_group_small .guidant-card-api-integration-text {
+    color: #fff;
+    background: #DE5819;
+    border-radius: 3px;
+    font-size: 10px;
+    padding: 4px 7px;
+    text-decoration: none;
+}
+.guidant_form_group_small .guidant-card-api-integration-text-large {
+    color: #fff;
+    background: #DE5819;
+    border-radius: 3px;
+    font-size: 13px;
+    padding: 4px 7px;
+    text-decoration: none;
+}
+.guidant_form_group_small .guidant-card-api-integration-text-light {
+    color: #DE5819;
+    border-radius: 3px;
+    font-size: 13px;
+    padding: 4px 7px;
+    text-decoration: none;
+}
+
 
 /* ------------ Tab Page Style ----------- */
 .guidant_tab_menu {

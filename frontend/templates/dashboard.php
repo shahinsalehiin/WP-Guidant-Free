@@ -70,7 +70,7 @@ $no_result_secondary_text = ($no_result_secondary_text == Null) ? "We will reach
             </div>
 
 
-            <?php echo base64_decode($this->guidant_free_activation()); ?>
+
 
             <div id="guidantguide_loader_container" style="display: none;">
                 <div class="guidant_loader_card">
@@ -98,7 +98,7 @@ $no_result_secondary_text = ($no_result_secondary_text == Null) ? "We will reach
             </div>
 
 
-
+            <?php echo base64_decode($this->guidant_free_activation()); ?>
 
 
 

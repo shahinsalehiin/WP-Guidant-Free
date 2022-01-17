@@ -32,7 +32,7 @@ if (!class_exists('GuidantShortcodeParser')) {
 
 
         function guidant_free_activation(){
-            return "PGRpdiBjbGFzcz0iZ3VpZGFudGd1aWRlX2Zvb3RlciI+CiAgICAgICAgICAgICAgICBQb3dlcmVkIEJ5IDxhIGhyZWY9Imh0dHBzOi8vd3Bjb21tZXJ6LmNvbS9ndWlkYW50IiB0YXJnZXQ9Il9ibGFuayI+V1AgR3VpZGFudDwvYT4KICAgICAgICAgICAgPC9kaXY+";
+            return "PGRpdiBjbGFzcz0iZ3VpZGFudGd1aWRlX2Zvb3RlciI+CiAgICAgICAgICAgICAgICBQb3dlcmVkIEJ5IDxhIGhyZWY9Imh0dHBzOi8vd3Bjb21tZXJ6LmNvbS93cC1ndWlkYW50IiB0YXJnZXQ9Il9ibGFuayI+V1AgR3VpZGFudDwvYT4KICAgICAgICAgICAgPC9kaXY+";
         }
 
         public function guidant_frontend_view_maker( $guide_id ) {

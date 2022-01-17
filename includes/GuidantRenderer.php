@@ -75,7 +75,7 @@ if ( ! class_exists( 'GuidantRenderer' ) ) {
                 $sql = "SELECT p.ID as post_id FROM {$wpdb->prefix}posts as p, {$wpdb->prefix}postmeta as m WHERE ";
 
 
-            }else if($attribute_type == "post_category" || $attribute_type == "woocommerce_category"){
+            }else if($attribute_type == "post_category" || $attribute_type == "woocommerce_category" || $attribute_type == "woocommerce_attributes"){
 
                 $sql = "SELECT p.ID as post_id FROM {$wpdb->prefix}posts as p, {$wpdb->prefix}terms as t, {$wpdb->prefix}term_taxonomy as tt, {$wpdb->prefix}term_relationships as tr WHERE ";
 
@@ -144,6 +144,10 @@ if ( ! class_exists( 'GuidantRenderer' ) ) {
 
             if($attribute_type == "woocommerce_stock_status" && class_exists('WooCommerce')) {
                 $sql .= "(m.meta_value {$matching_type_and_value} AND m.meta_key = '_stock_status' AND p.ID = m.post_id)";
+            }
+
+            if($attribute_type == "woocommerce_attributes" && class_exists('WooCommerce')) {
+                $sql .= "(t.slug {$matching_type_and_value} AND tr.term_taxonomy_id = t.term_id AND p.ID = tr.object_id AND p.post_type = 'product' AND p.post_status = 'publish')";
             }
 
 
