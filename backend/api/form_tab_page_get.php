@@ -35,6 +35,9 @@ if(current_user_can('manage_options')){
         $element_required = $this->settings->updateElementSettings($element_id, "element_required");
         $element_required = ($element_required == Null) ? "required" : $element_required;
 
+        $element_class = $this->settings->updateElementSettings($element_id, "element_class");
+        $element_class = ($element_class == Null) ? "" : $element_class;
+
 
         $result = array(
             "status" => 'true',
@@ -44,7 +47,8 @@ if(current_user_can('manage_options')){
             "select_items" => $select_items,
             "checkbox_items" => $checkbox_items,
             "radio_items" => $radio_items,
-            "element_required" => $element_required);
+            "element_required" => $element_required,
+            "element_class" => $element_class);
     }else{
         $result = array("status" => 'false');
     }

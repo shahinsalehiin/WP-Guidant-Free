@@ -490,6 +490,18 @@
                     <span class="pro_tag"><strong>Pro</strong></span>
                 </div>
 
+
+                <div class="guidant_form_group_small wider_space pro_field">
+                    <h4> Auto move to next filter <?php $this->guidant_field_info("Automatically move to next filter on radio card selection."); ?></h4>
+                    <div>
+                        <select id="guidant_guides_update_guide_auto_move_to_next_filter">
+                            <option value="enable">Enable</option>
+                            <option value="disable">Disable</option>
+                        </select>
+                    </div>
+                    <span class="pro_tag"><strong>Pro</strong></span>
+                </div>
+
             </div>
 
 
@@ -668,50 +680,149 @@
 
             <div class="guidant_tab_item">
 
-                <div class="guidant_form_group">
-                    <label for="guidant_guides_update_display_result"> Display Result on Completion? </label>
-                    <select id="guidant_guides_update_display_result">
-                        <option value="true">Yes</option>
-                        <option value="false">No</option>
-                    </select>
+                <div class="guidant_form_group_small wider_space">
+                    <h4> Display Result on Completion? </h4>
+                    <div>
+                        <select id="guidant_guides_update_display_result">
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                    </div>
                 </div>
 
 
                 <div id="guidant_guides_update_display_result_container" style="display: none;">
-                    <div class="guidant_form_group">
-                        <label for="guidant_guides_update_result_maximum"> Maximum Results</label>
-                        <input type="number" id="guidant_guides_update_result_maximum">
+
+                    <div class="guidant_form_group_small wider_space">
+                        <h4> Maximum Results </h4>
+                        <div>
+                            <input type="number" id="guidant_guides_update_result_maximum">
+                        </div>
                     </div>
 
-                    <div class="guidant_form_group">
-                        <label for="guidant_guides_update_result_headline_text"> Headline</label>
-                        <input type="text" id="guidant_guides_update_result_headline_text">
+                    <div class="guidant_form_group_small wider_space">
+                        <h4> Headline </h4>
+                        <div>
+                            <input type="text" id="guidant_guides_update_result_headline_text">
+                        </div>
                     </div>
 
-                    <div class="guidant_form_group">
-                        <label for="guidant_guides_update_result_more_text"> More Results Text</label>
-                        <input type="text" id="guidant_guides_update_result_more_text">
+                    <div class="guidant_form_group_small wider_space">
+                        <h4> More Results Text </h4>
+                        <div>
+                            <input type="text" id="guidant_guides_update_result_more_text">
+                        </div>
                     </div>
 
-                    <div class="guidant_form_group">
-                        <label for="guidant_guides_update_result_empty_text"> No Results Text</label>
-                        <input type="text" id="guidant_guides_update_result_empty_text">
+                    <div class="guidant_form_group_small wider_space">
+                        <h4> No Results Text </h4>
+                        <div>
+                            <input type="text" id="guidant_guides_update_result_empty_text">
+                        </div>
                     </div>
+
+
+
+                    <div class="guidant_form_group_small wider_space pro_field">
+                        <h4> Headline Text Color </h4>
+                        <div class="guidant-color-container">
+                            <input type="color" id="guidant_guides_update_result_headline_text_color">
+                            <label for="guidant_guides_update_result_headline_text_color">Select Color</label>
+                        </div>
+                        <span class="pro_tag"><strong>Pro</strong></span>
+                    </div>
+
+                    <div class="guidant_form_group_small wider_space pro_field">
+                        <h4> More Results Text Color </h4>
+                        <div class="guidant-color-container">
+                            <input type="color" id="guidant_guides_update_result_more_text_color">
+                            <label for="guidant_guides_update_result_more_text_color">Select Color</label>
+                        </div>
+                        <span class="pro_tag"><strong>Pro</strong></span>
+                    </div>
+
+                    <div class="guidant_form_group_small wider_space pro_field">
+                        <h4> No Results Text Color </h4>
+                        <div class="guidant-color-container">
+                            <input type="color" id="guidant_guides_update_result_empty_text_color">
+                            <label for="guidant_guides_update_result_empty_text_color">Select Color</label>
+                        </div>
+                        <span class="pro_tag"><strong>Pro</strong></span>
+                    </div>
+
+                    <div class="guidant_form_group_small wider_space pro_field">
+                        <h4> Result Card Background Color </h4>
+                        <div class="guidant-color-container">
+                            <input type="color" id="guidant_guides_update_result_card_bg_color">
+                            <label for="guidant_guides_update_result_card_bg_color">Select Color</label>
+                        </div>
+                        <span class="pro_tag"><strong>Pro</strong></span>
+                    </div>
+
+                    <div class="guidant_form_group_small wider_space pro_field">
+                        <h4> Result Card Text Color </h4>
+                        <div class="guidant-color-container">
+                            <input type="color" id="guidant_guides_update_result_card_text_color">
+                            <label for="guidant_guides_update_result_card_text_color">Select Color</label>
+                        </div>
+                        <span class="pro_tag"><strong>Pro</strong></span>
+                    </div>
+
+
+                    <div class="guidant_form_group_small wider_space pro_field">
+                        <h4> Result Card Button BG Color </h4>
+                        <div class="guidant-color-container">
+                            <input type="color" id="guidant_guides_update_result_card_button_bg_color">
+                            <label for="guidant_guides_update_result_card_button_bg_color">Select Color</label>
+                        </div>
+                        <span class="pro_tag"><strong>Pro</strong></span>
+                    </div>
+                    <div class="guidant_form_group_small wider_space pro_field">
+                        <h4> Result Card Button Text Color </h4>
+                        <div class="guidant-color-container">
+                            <input type="color" id="guidant_guides_update_result_card_button_text_color">
+                            <label for="guidant_guides_update_result_card_button_text_color">Select Color</label>
+                        </div>
+                        <span class="pro_tag"><strong>Pro</strong></span>
+                    </div>
+
+
                 </div>
 
 
                 <div id="guidant_guides_update_no_result_container" style="display: none;">
 
-                    <div class="guidant_form_group">
-                        <label for="guidant_guides_update_no_result_primary_text"> Primary Text</label>
-                        <input type="text" id="guidant_guides_update_no_result_primary_text">
+                    <div class="guidant_form_group_small wider_space">
+                        <h4> Primary Text </h4>
+                        <div>
+                            <input type="text" id="guidant_guides_update_no_result_primary_text">
+                        </div>
                     </div>
 
-                    <div class="guidant_form_group">
-                        <label for="guidant_guides_update_no_result_secondary_text"> Secondary Text</label>
-                        <input type="text" id="guidant_guides_update_no_result_secondary_text">
+                    <div class="guidant_form_group_small wider_space">
+                        <h4> Secondary Text </h4>
+                        <div>
+                            <input type="text" id="guidant_guides_update_no_result_secondary_text">
+                        </div>
                     </div>
 
+                </div>
+
+                <div class="guidant_form_group_small wider_space pro_field">
+                    <h4> Start Over Text </h4>
+                    <div>
+                        <input type="text" id="guidant_guides_update_result_start_over_text">
+                    </div>
+                    <span class="pro_tag"><strong>Pro</strong></span>
+                </div>
+
+                <div class="guidant_form_group_small wider_space pro_field">
+                    <h4> Start Over Text Color </h4>
+                    <div class="guidant-color-container">
+                        <input type="color" id="guidant_guides_update_result_start_over_text_color">
+                        <label for="guidant_guides_update_result_start_over_text_color">Select Color</label>
+                    </div>
+                    <span class="pro_tag"><strong>Pro</strong></span>
                 </div>
 
             </div>

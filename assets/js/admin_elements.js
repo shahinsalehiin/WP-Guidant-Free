@@ -1,5 +1,10 @@
 
 /* =========== ELEMENTS OPERATIONS ========== */
+
+function guidant_elements_back_to_filters(host){
+    guidant_filters_list(host, guidant_current_guide_id)
+}
+
 function guidant_elements_list(host, filter_id, filter_type){
     'use strict';
     guidant_current_filter_id = filter_id;
@@ -19,17 +24,17 @@ function guidant_elements_list(host, filter_id, filter_type){
 
     if(filter_type === "card"){
         jQuery("#guidant_elements_list .guidant-body-title h3").text("Card Items");
-        jQuery("#guidant_elements_list .guidant-body-title button").text("Add Card");
+        jQuery("#guidant_elements_list .guidant-body-title button.guidant-btn").text("Add Card");
         jQuery("#guidant_elements_list .guidant-empty h3").text("You don't have any card created yet");
         jQuery("#guidant_elements_list .guidant-empty button").text("Create New Card");
     }else if(filter_type === "slider"){
         jQuery("#guidant_elements_list .guidant-body-title h3").text("Slider Items");
-        jQuery("#guidant_elements_list .guidant-body-title button").text("Add Slider");
+        jQuery("#guidant_elements_list .guidant-body-title button.guidant-btn").text("Add Slider");
         jQuery("#guidant_elements_list .guidant-empty h3").text("You don't have any slider created yet");
         jQuery("#guidant_elements_list .guidant-empty button").text("Create New Slider");
     }else if(filter_type === "form"){
         jQuery("#guidant_elements_list .guidant-body-title h3").text("Form Elements");
-        jQuery("#guidant_elements_list .guidant-body-title button").text("Add Item");
+        jQuery("#guidant_elements_list .guidant-body-title button.guidant-btn").text("Add Item");
         jQuery("#guidant_elements_list .guidant-empty h3").text("You don't have any Form element created yet");
         jQuery("#guidant_elements_list .guidant-empty button").text("Create New Element");
     }

@@ -58,6 +58,7 @@ if ( ! class_exists( 'GuidantUtils' ) ) {
             $wooCommerceAttributes = array();
             if (class_exists('WooCommerce')) {
                 $wooCommerceAttributes[] = array("id" => "woocommerce_category", "text" => "[WooCommerce] Product Category");
+                $wooCommerceAttributes[] = array("id" => "woocommerce_tags", "text" => "[WooCommerce] Product Tags");
                 $wooCommerceAttributes[] = array("id" => "woocommerce_product", "text" => "[WooCommerce] Product");
                 $wooCommerceAttributes[] = array("id" => "woocommerce_price", "text" => "[WooCommerce] Price");
                 $wooCommerceAttributes[] = array("id" => "woocommerce_sale_price", "text" => "[WooCommerce] Sale Price");
@@ -210,6 +211,23 @@ if ( ! class_exists( 'GuidantUtils' ) ) {
                     if (sizeof($listCategories) > 0) {
                         foreach ($listCategories as $singleCategory) {
                             $attributeValues[] = array("id" => $singleCategory->name, "text" => $singleCategory->name);
+                        }
+                    }
+                }
+            }
+
+
+            if($attribute_name == "woocommerce_tags") {
+                if (class_exists('WooCommerce')) {
+                    $sql = $wpdb->prepare( "SELECT terms.name as tag FROM {$wpdb->prefix}posts as posts, {$wpdb->prefix}terms as terms,
+                                                    {$wpdb->prefix}term_relationships as relationship, {$wpdb->prefix}term_taxonomy as taxonomies
+                                                    WHERE posts.post_type = 'product' AND posts.post_status = 'publish' 
+                                                    AND relationship.object_id = posts.ID AND taxonomies.term_taxonomy_id = relationship.term_taxonomy_id
+                                                    AND taxonomies.taxonomy = 'product_tag' AND terms.term_id = taxonomies.term_id AND terms.name LIKE %s GROUP BY terms.name LIMIT 10", array( '%'.$search.'%' ) );
+                    $listTags = $wpdb->get_results($sql);
+                    if (sizeof($listTags) > 0) {
+                        foreach ($listTags as $singleTag) {
+                            $attributeValues[] = array("id" => $singleTag->tag, "text" => $singleTag->tag);
                         }
                     }
                 }

@@ -1,3 +1,7 @@
+function guidant_slider_back_to_elements(host){
+    guidant_elements_list(host, guidant_current_filter_id, guidant_current_filter_type)
+}
+
 function guidant_slider_tab_page_get(host, element_id){
     'use strict';
     guidant_current_element_id = element_id;
@@ -40,8 +44,17 @@ function guidant_slider_tab_page_get(host, element_id){
             if(obj.status == "true"){
                 jQuery("#guidant_slider_tab_page_slider_type").val(obj.slider_type);
                 jQuery("#guidant_slider_tab_page_behavior").val(obj.behavior);
-                jQuery("#guidant_slider_tab_page_image").val(obj.slider_image);
-                jQuery("#guidant_slider_tab_page_image_shower").attr("src", obj.slider_image_url);
+
+
+
+                if (obj.slider_image.toLowerCase().indexOf("empty_img.png") >= 0){
+                    jQuery("#guidant_slider_tab_page_image").val("");
+                }else{
+                    jQuery("#guidant_slider_tab_page_image").val(obj.slider_image);
+                }
+                jQuery("#guidant_slider_tab_page_image_shower").attr("src", obj.slider_image);
+
+
 
                 jQuery("#guidant_slider_tab_page_slider_label").val(obj.slider_label);
                 jQuery("#guidant_slider_tab_page_min_range").val(obj.min_range);

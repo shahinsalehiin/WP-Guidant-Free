@@ -1,7 +1,10 @@
 <div id="guidant_card_tab_page_container" style="display: none;">
     <div class="guidant-body-title">
         <h3> Card Settings </h3>
-        <button class="guidant-btn guidant_card_update_btn" onclick="guidant_card_tab_page_save('<?php echo esc_attr(GUIDANT_URL); ?>')">Save Changes</button>
+        <div style="display: flex;">
+            <button style="margin-right: 12px" class="guidant-btn-light-img" onclick="guidant_card_back_to_elements('<?php echo esc_attr(GUIDANT_URL); ?>')"> <img src="<?php echo esc_attr(GUIDANT_IMG_DIR); ?>/guidant-back-icon.svg" > Back to All Cards</button>
+            <button class="guidant-btn guidant_card_update_btn" onclick="guidant_card_tab_page_save('<?php echo esc_attr(GUIDANT_URL); ?>')">Save Changes</button>
+        </div>
     </div>
     <div class="guidant_loader_block guidant-loader" style="display: none;">
         <div class='loader'></div>
@@ -20,13 +23,6 @@
                     <label for="guidant-gname"> Card Label</label>
                     <input type="text" id="guidant_card_tab_page_label" placeholder="Text to be displayed inside card">
                 </div>
-                <!--<div class="guidant_form_group">
-                    <label for="guidant-gtitle"> Card Image</label>
-                    <input type="hidden" id="guidant_card_tab_page_image">
-                    <img width="60px" height="60px" id="guidant_card_tab_page_image_shower" >
-                    <button onclick="guidant_image_chooser('guidant_card_tab_page_image', 'guidant_card_tab_page_image_shower')">Choose Image</button></br>
-                </div>-->
-
 
                 <div class="guidant_form_group">
                     <label for="guidant-cardfilset-imglab"> Card Image</label>

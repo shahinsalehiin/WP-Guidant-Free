@@ -95,7 +95,11 @@
 <div id="guidant_filters_list" style="display: none;">
     <div class="guidant-body-title">
         <h3> Filters </h3>
-        <button class="guidant-btn" onclick="guidant_filters_create_show('<?php echo esc_attr(GUIDANT_URL); ?>')"> Create Filter</button>
+        <div style="display: flex;">
+            <button style="margin-right: 12px" class="guidant-btn-light-img" onclick="guidant_guides_list('<?php echo esc_attr(GUIDANT_URL); ?>')"> <img src="<?php echo esc_attr(GUIDANT_IMG_DIR); ?>/guidant-back-icon.svg" > Back to All Guides</button>
+            <button class="guidant-btn" onclick="guidant_filters_create_show('<?php echo esc_attr(GUIDANT_URL); ?>')"> Create Filter</button>
+        </div>
+
     </div>
     <div class="guidant_loader_block guidant-loader" style="display: none;">
         <div class='loader'></div>

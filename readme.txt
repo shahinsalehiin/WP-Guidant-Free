@@ -4,8 +4,8 @@ Donate link: https://wpcommerz.com/guidant/
 Tags: guide plugin, wp guidant, guided selling, recommendation, forms
 Requires PHP: 5.6
 Requires at least: 5.1
-Tested up to: 5.8
-Stable tag: 1.0.3
+Tested up to: 6.0
+Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -94,6 +94,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
         <p>10+ ready-made templates you can choose from and create a proper guide with pre-built filters, cards, sliders and form elements and their complete customization with just a click.</p>
     </li>
 
+    <li>
+        <strong>Webhook</strong>
+        <p>Do real-time data communication with popular web apps or services with the webhook feature. You can send and store user inputs to MailChimp, Mailjet, Google Sheets and many more through popular services such as Pabbly, Zapier etc. Take advantage of web automation to power your business. </p>
+    </li>
+
 </ol>
 
 
@@ -173,7 +178,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 </ol>
 
 
+<h3>🔥 WP GUIDANT FEATURED BY TOP REVIEWER:</h3>
 
+<p>Lot of love by WPLearningLab and DecisiveMarketer.</p>
+[youtube https://www.youtube.com/watch?v=m1B4I1irRs4]
+[youtube https://www.youtube.com/watch?v=-eAZJzjG3Jg]
 
 
 <h3>HOW WP GUIDANT WORKS</h3>
@@ -278,6 +287,16 @@ screenshot-13.png
 screenshot-14.png
 
 == Changelog ==
+
+= 1.0.5 =
+1. Updated: Compatibility with WordPress 6.0
+2. Improved: Performance of the plugin has been improved
+
+= 1.0.4 =
+1. Step back option from result page
+2. Performance Improved
+3. UX Improvements
+4. Fixed minor bugs
 
 = 1.0.3 =
 1. Compatibility with WP Guidant Pro

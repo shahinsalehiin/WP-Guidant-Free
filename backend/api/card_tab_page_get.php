@@ -14,28 +14,27 @@ if(current_user_can('manage_options')){
         $card_label = ($card_label == Null) ? "" : $card_label;
 
         $card_image = $this->settings->updateElementSettings($element_id, "card_image");
-        $card_image = ($card_image == Null) ? "0" : $card_image;
+        $card_image = ($card_image == Null) ? "" : $card_image;
 
         $behavior = $this->settings->updateElementSettings($element_id, "behavior");
         $behavior = ($behavior == Null) ? "or" : $behavior;
 
 
-        $card_image_url = "";
+
         if(isset($card_image)){
-            if(strlen(trim($card_image)) > 0){
-                $card_image_url = ($card_image > 0) ? wp_get_attachment_url($card_image) : GUIDANT_IMG_DIR . "empty_img.png";
-            }else{
-                $card_image_url = GUIDANT_IMG_DIR . "empty_img.png";
+            if(!strlen(trim($card_image)) > 0){
+                $card_image = GUIDANT_IMG_DIR . "empty_img.png";
             }
         }else{
-            $card_image_url = GUIDANT_IMG_DIR . "empty_img.png";
+            $card_image = GUIDANT_IMG_DIR . "empty_img.png";
         }
+
+
 
         $result = array(
             "status" => 'true',
             "card_label" => $card_label,
             "card_image" => $card_image,
-            "card_image_url" => $card_image_url,
             "behavior" => $behavior);
     }else{
         $result = array("status" => 'false');

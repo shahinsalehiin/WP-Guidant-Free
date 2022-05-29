@@ -179,6 +179,28 @@ Version: 1.0
 
 
 
+.guidant-btn-light-img {
+    display: flex;
+    align-items: center;
+    padding: 13px 15px;
+    background: #eeeeee;
+    color: #333;
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.guidant-btn-light-img:hover{
+    background: #e5e4e4;
+}
+
+.guidant-btn-light-img img{
+    width: 18px;
+    margin-right: 7px;
+}
+
+
 .guidant-body-title h3 {
     color: #1D2327;
     font-size: 24px;

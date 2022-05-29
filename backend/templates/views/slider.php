@@ -1,7 +1,12 @@
 <div id="guidant_slider_tab_page_container" style="display: none;">
     <div class="guidant-body-title">
         <h3> Slider Settings </h3>
-        <button class="guidant-btn guidant_slider_update_btn" onclick="guidant_slider_tab_page_save('<?php echo esc_attr(GUIDANT_URL); ?>')">Save Changes</button>
+
+        <div style="display: flex;">
+            <button style="margin-right: 12px" class="guidant-btn-light-img" onclick="guidant_slider_back_to_elements('<?php echo esc_attr(GUIDANT_URL); ?>')"> <img src="<?php echo esc_attr(GUIDANT_IMG_DIR); ?>/guidant-back-icon.svg" > Back to All Sliders</button>
+            <button class="guidant-btn guidant_slider_update_btn" onclick="guidant_slider_tab_page_save('<?php echo esc_attr(GUIDANT_URL); ?>')">Save Changes</button>
+        </div>
+
     </div>
     <div class="guidant_loader_block guidant-loader" style="display: none;">
         <div class='loader'></div>

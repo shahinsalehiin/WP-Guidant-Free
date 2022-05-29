@@ -36,6 +36,14 @@ $no_result_primary_text = ($no_result_primary_text == Null) ? "Thank You for you
 
 $no_result_secondary_text = $this->settings->updateGuideSettings($guide_id, "no_result_secondary_text");
 $no_result_secondary_text = ($no_result_secondary_text == Null) ? "We will reach back to you soon." : $no_result_secondary_text;
+
+
+$result_start_over_text = $this->settings->updateGuideSettings($guide_id, "result_start_over_text");
+$result_start_over_text = ($result_start_over_text == Null) ? "Back to Guide" : $result_start_over_text;
+
+$result_start_over_text_color = $this->settings->updateGuideSettings($guide_id, "result_start_over_text_color");
+$result_start_over_text_color = ($result_start_over_text_color == Null) ? "#de5819" : $result_start_over_text_color;
+
 ?>
 
 
@@ -112,6 +120,19 @@ $no_result_secondary_text = ($no_result_secondary_text == Null) ? "We will reach
         <div class="guidant_result_container">
 
         </div>
+    </div>
+
+
+    <div id="guidantguide_start_over_container" style="display: none;">
+        <button onclick="guidant_guide_start_over(`<?php echo esc_attr($unique_id); ?>`)" class="guidantguide_start_over_btn">
+            <svg viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="icon/process">
+                    <path id="Shape" d="M3.99 5L11 5L11 3L3.99 3L3.99 6.12834e-07L-3.49691e-07 4L3.99 8L3.99 5Z" fill="#FF521D"/>
+                </g>
+            </svg>
+
+            <span class="guidantguide_start_over_btn_text"><?php echo esc_attr($result_start_over_text); ?></span>
+        </button>
     </div>
 </div>
 

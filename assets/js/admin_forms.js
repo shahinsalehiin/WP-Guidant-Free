@@ -1,3 +1,7 @@
+function guidant_form_back_to_elements(host){
+    guidant_elements_list(host, guidant_current_filter_id, guidant_current_filter_type)
+}
+
 function guidant_form_tab_page_get(host, element_id){
     'use strict';
     guidant_current_element_id = element_id;
@@ -45,6 +49,7 @@ function guidant_form_tab_page_get(host, element_id){
                 jQuery("#guidant_form_tab_page_element_label").val(obj.element_label);
                 jQuery("#guidant_form_tab_page_input_type").val(obj.input_type).trigger('change');
                 jQuery("#guidant_form_tab_page_element_required").val(obj.element_required);
+                jQuery("#guidant_form_tab_page_element_class").val(obj.element_class);
 
 
                 jQuery("#guidant_form_tab_page_input_field_type").val(obj.input_field_type);
@@ -154,7 +159,8 @@ function guidant_form_tab_page_save(host){
         'select_items': select_items.join("[:::]"),
         'checkbox_items': checkbox_items.join("[:::]"),
         'radio_items': radio_items.join("[:::]"),
-        'element_required': jQuery("#guidant_form_tab_page_element_required").val()
+        'element_required': jQuery("#guidant_form_tab_page_element_required").val(),
+        'element_class': jQuery("#guidant_form_tab_page_element_class").val()
     };
     jQuery.ajax({
         url: ajaxurl,

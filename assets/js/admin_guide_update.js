@@ -48,8 +48,16 @@ function guidant_guide_update_tab_page_get(host, guide_id){
                 jQuery("#guidant_guides_update_guide_title_fontsize").val(obj.guide_title_fontsize);
                 jQuery("#guidant_guides_update_guide_description_color").val(obj.guide_description_color);
                 jQuery("#guidant_guides_update_guide_description_fontsize").val(obj.guide_description_fontsize);
-                jQuery("#guidant_guides_update_guide_background_image").val(obj.guide_background_image);
-                jQuery("#guidant_guides_update_guide_background_image_shower").attr("src", obj.guide_background_image_url);
+
+
+                if (obj.guide_background_image.toLowerCase().indexOf("empty_img.png") >= 0){
+                    jQuery("#guidant_guides_update_guide_background_image").val("");
+                }else{
+                    jQuery("#guidant_guides_update_guide_background_image").val(obj.guide_background_image);
+                }
+
+                jQuery("#guidant_guides_update_guide_background_image_shower").attr("src", obj.guide_background_image);
+
                 jQuery("#guidant_guides_update_guide_background_startcolor").val(obj.guide_background_startcolor);
                 jQuery("#guidant_guides_update_guide_background_endcolor").val(obj.guide_background_endcolor);
                 jQuery("#guidant_guides_update_guide_background_direction").val(obj.guide_background_direction);
@@ -84,6 +92,7 @@ function guidant_guide_update_tab_page_get(host, guide_id){
                 jQuery("#guidant_guides_update_card_radio_border_hover_color").val(obj.card_radio_border_hover_color);
                 jQuery("#guidant_guides_update_card_radio_selected_bg_color").val(obj.card_radio_selected_bg_color);
                 jQuery("#guidant_guides_update_card_radio_selected_icon_color").val(obj.card_radio_selected_icon_color);
+                jQuery("#guidant_guides_update_guide_auto_move_to_next_filter").val(obj.auto_move_to_next_filter);
 
                 jQuery("#guidant_guides_update_slider_label_color").val(obj.slider_label_color);
                 jQuery("#guidant_guides_update_slider_label_fontsize").val(obj.slider_label_fontsize);
@@ -108,6 +117,8 @@ function guidant_guide_update_tab_page_get(host, guide_id){
                 jQuery("#guidant_guides_update_result_empty_text").val(obj.result_empty_text);
                 jQuery("#guidant_guides_update_no_result_primary_text").val(obj.no_result_primary_text);
                 jQuery("#guidant_guides_update_no_result_secondary_text").val(obj.no_result_secondary_text);
+                jQuery("#guidant_guides_update_result_start_over_text").val(obj.result_start_over_text);
+                jQuery("#guidant_guides_update_result_start_over_text_color").val(obj.result_start_over_text_color);
 
 
             }
@@ -195,6 +206,7 @@ function guidant_guides_update(host){
             'card_radio_border_hover_color': jQuery("#guidant_guides_update_card_radio_border_hover_color").val(),
             'card_radio_selected_bg_color': jQuery("#guidant_guides_update_card_radio_selected_bg_color").val(),
             'card_radio_selected_icon_color': jQuery("#guidant_guides_update_card_radio_selected_icon_color").val(),
+            'auto_move_to_next_filter': jQuery("#guidant_guides_update_guide_auto_move_to_next_filter").val(),
 
             'slider_label_color': jQuery("#guidant_guides_update_slider_label_color").val(),
             'slider_label_fontsize': jQuery("#guidant_guides_update_slider_label_fontsize").val(),

@@ -14,7 +14,7 @@ if(current_user_can('manage_options')){
         $slider_type = ($slider_type == Null) ? "single" : $slider_type;
 
         $slider_image = $this->settings->updateElementSettings($element_id, "slider_image");
-        $slider_image = ($slider_image == Null) ? "0" : $slider_image;
+        $slider_image = ($slider_image == Null) ? "" : $slider_image;
 
         $behavior = $this->settings->updateElementSettings($element_id, "behavior");
         $behavior = ($behavior == Null) ? "or" : $behavior;
@@ -41,22 +41,22 @@ if(current_user_can('manage_options')){
 
 
 
-        $slider_image_url = "";
+
         if(isset($slider_image)){
-            if(strlen(trim($slider_image)) > 0){
-                $slider_image_url = ($slider_image > 0) ? wp_get_attachment_url($slider_image) : GUIDANT_IMG_DIR . "empty_img.png";
-            }else{
-                $slider_image_url = GUIDANT_IMG_DIR . "empty_img.png";
+            if(!strlen(trim($slider_image)) > 0){
+                $slider_image = GUIDANT_IMG_DIR . "empty_img.png";
             }
         }else{
-            $slider_image_url = GUIDANT_IMG_DIR . "empty_img.png";
+            $slider_image = GUIDANT_IMG_DIR . "empty_img.png";
         }
+
+
+
 
         $result = array(
             "status" => 'true',
             "slider_type" => $slider_type,
             "slider_image" => $slider_image,
-            "slider_image_url" => $slider_image_url,
             "behavior" => $behavior,
             "slider_label" => $slider_label,
             "min_range" => $min_range,

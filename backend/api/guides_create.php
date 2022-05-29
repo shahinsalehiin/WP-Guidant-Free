@@ -186,6 +186,10 @@ if(current_user_can('manage_options')){
             $card_radio_selected_icon_color = sanitize_text_field($_REQUEST['card_radio_selected_icon_color']);
             $this->settings->updateGuideSettings($guide_id, "card_radio_selected_icon_color", $card_radio_selected_icon_color);
         }
+        if(isset($_REQUEST['auto_move_to_next_filter'])){
+            $auto_move_to_next_filter = sanitize_text_field($_REQUEST['auto_move_to_next_filter']);
+            $this->settings->updateGuideSettings($guide_id, "auto_move_to_next_filter", $auto_move_to_next_filter);
+        }
 
 
 

@@ -44,6 +44,11 @@ if(current_user_can('manage_options')){
             $this->settings->updateElementSettings($element_id, "element_required", $element_required);
         }
 
+        if(isset($_REQUEST['element_class'])){
+            $element_class = sanitize_text_field($_REQUEST['element_class']);
+            $this->settings->updateElementSettings($element_id, "element_class", $element_class);
+        }
+
 
 
         $result = array("status" => 'true', "msg" => esc_attr__('Element Saved', 'guidant'));

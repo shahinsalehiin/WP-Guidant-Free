@@ -6,7 +6,6 @@ var mySlider = []
 jQuery(document).ready(function($){
     'use strict';
 
-
     jQuery('.guidant_guide').each(function( index ) {
         var this_guide = this
         var unique_id = jQuery(this_guide).data('unique_id')
@@ -20,7 +19,6 @@ jQuery(document).ready(function($){
         initGuideSubmission(unique_id)
         renderElements(unique_id)
         initGuideActionBtn(unique_id)
-
 
     })
 
@@ -519,8 +517,21 @@ function renderElements(unique_id)
 }
 
 
+function guidant_guide_start_over(unique_id){
+    jQuery(".guidant_unique_id_"+unique_id+" #guidantguide_loader_container").hide();
+    jQuery(".guidant_unique_id_"+unique_id+" #guidantguide_start_over_container").hide();
+    jQuery(".guidant_unique_id_"+unique_id+" .guidantguide_filters_container").show();
+    jQuery(".guidant_unique_id_"+unique_id+" #guidantguide_empty_container").hide();
+    jQuery(".guidant_unique_id_"+unique_id+" #guidantguide_no_result_container").hide();
+    jQuery(".guidant_unique_id_"+unique_id+" #guidantguide_best_result_container").hide();
+    jQuery(".guidant_unique_id_"+unique_id+" #guidant_front_guide_result_block").hide();
+    jQuery(".guidant_unique_id_"+unique_id+" #guidantguide_best_result_container .guidant_result_container").empty()
+    jQuery(".guidant_unique_id_"+unique_id+" #guidant_front_guide_result_block .guidant_result_container").empty()
 
 
+    initGuideFilter(unique_id, 0)
+    initGuideActionBtn(unique_id)
+}
 
 function guidant_guide_submission(unique_id, guide_id){
     'use strict';
@@ -532,6 +543,7 @@ function guidant_guide_submission(unique_id, guide_id){
         jQuery(".guidant_unique_id_"+unique_id+" #guidantguide_no_result_container").hide();
         jQuery(".guidant_unique_id_"+unique_id+" #guidantguide_best_result_container").hide();
         jQuery(".guidant_unique_id_"+unique_id+" #guidant_front_guide_result_block").hide();
+        jQuery(".guidant_unique_id_"+unique_id+" #guidantguide_best_result_container .guidant_result_container").empty()
         jQuery(".guidant_unique_id_"+unique_id+" #guidant_front_guide_result_block .guidant_result_container").empty()
 
         var post_data = {
@@ -549,6 +561,10 @@ function guidant_guide_submission(unique_id, guide_id){
                 var obj = JSON.parse(data);
 
                 if(obj.status == "true"){
+
+                    if(jQuery(".guidant_unique_id_"+unique_id+" #guidantguide_start_over_container .guidantguide_start_over_btn_text").text().toString().trim().length > 0){
+                        jQuery(".guidant_unique_id_"+unique_id+" #guidantguide_start_over_container").css("display", "flex")
+                    }
 
                     jQuery(".guidant_unique_id_"+unique_id+" #guidantguide_loader_container").hide();
 

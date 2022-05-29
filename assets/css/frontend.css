@@ -521,6 +521,38 @@
 
 /*  =========== Result Block Designs ========== */
 
+#guidantguide_start_over_container{
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 0 0;
+}
+
+#guidantguide_start_over_container .guidantguide_start_over_btn {
+    display: flex;
+    align-items: center;
+    padding: 7px 12px;
+    background: #eeeeee;
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #de5819;
+}
+#guidantguide_start_over_container .guidantguide_start_over_btn:hover{
+    background: #e5e4e4;
+}
+
+#guidantguide_start_over_container .guidantguide_start_over_btn svg{
+    width: 12px;
+    margin-right: 7px;
+}
+#guidantguide_start_over_container .guidantguide_start_over_btn svg *{
+    fill: #de5819;
+    width: 18px;
+    margin-right: 7px;
+}
+
 #guidantguide_no_result_container h3{
     color: #1f1f20;
     font-weight: 600;

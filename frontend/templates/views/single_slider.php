@@ -1,12 +1,9 @@
 <?php
 
-$slider_image_tag = "";
 $slider_image = $this->settings->updateElementSettings($single_element['element_id'], "slider_image");
 if(isset($slider_image)){
     if(strlen(trim($slider_image)) > 0){
-        if($slider_image > 0){
-            $slider_image_tag = "<img src=\"".wp_get_attachment_url($slider_image)."\" width=\"100px\" height=\"100px\">";
-        }
+        $slider_image = "<img src=\"".$slider_image."\" width=\"100px\" height=\"100px\">";
     }
 }
 
@@ -42,7 +39,7 @@ $slider_postfix_text = ($slider_postfix_text == Null) ? "" : $slider_postfix_tex
      data-slider_prefix_text="<?php echo esc_attr($slider_prefix_text) ?>"
      data-slider_postfix_text="<?php echo esc_attr($slider_postfix_text) ?>">
 
-    <?php echo isset($slider_image_tag) ? $slider_image_tag : ""; ?>
+    <?php echo isset($slider_image) ? $slider_image : ""; ?>
     <h4><?php echo esc_attr($slider_label) ?></h4>
     <input id="guidant_slider_<?php echo esc_attr($single_element['element_id']) ?>" type="text" />
 

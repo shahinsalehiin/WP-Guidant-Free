@@ -144,7 +144,8 @@ if(current_user_can('manage_options')){
         $card_radio_selected_icon_color = $this->settings->updateGuideSettings($guide_id, "card_radio_selected_icon_color");
         $card_radio_selected_icon_color = ($card_radio_selected_icon_color == Null) ? "#ffffff" : $card_radio_selected_icon_color;
 
-
+        $auto_move_to_next_filter = $this->settings->updateGuideSettings($guide_id, "auto_move_to_next_filter");
+        $auto_move_to_next_filter = ($auto_move_to_next_filter == Null) ? "disable" : $auto_move_to_next_filter;
 
 
 
@@ -218,16 +219,20 @@ if(current_user_can('manage_options')){
         $no_result_secondary_text = $this->settings->updateGuideSettings($guide_id, "no_result_secondary_text");
         $no_result_secondary_text = ($no_result_secondary_text == Null) ? "We will reach back to you soon." : $no_result_secondary_text;
 
+        $result_start_over_text = $this->settings->updateGuideSettings($guide_id, "result_start_over_text");
+        $result_start_over_text = ($result_start_over_text == Null) ? "Back to Guide" : $result_start_over_text;
 
-        $guide_background_image_url = "";
+        $result_start_over_text_color = $this->settings->updateGuideSettings($guide_id, "result_start_over_text_color");
+        $result_start_over_text_color = ($result_start_over_text_color == Null) ? "#de5819" : $result_start_over_text_color;
+
+
+
         if(isset($guide_background_image)){
-            if(strlen(trim($guide_background_image)) > 0){
-                $guide_background_image_url = ($guide_background_image > 0) ? wp_get_attachment_url($guide_background_image) : GUIDANT_IMG_DIR . "empty_img.png";
-            }else{
-                $guide_background_image_url = GUIDANT_IMG_DIR . "empty_img.png";
+            if(!strlen(trim($guide_background_image)) > 0){
+                $guide_background_image = GUIDANT_IMG_DIR . "empty_img.png";
             }
         }else{
-            $guide_background_image_url = GUIDANT_IMG_DIR . "empty_img.png";
+            $guide_background_image = GUIDANT_IMG_DIR . "empty_img.png";
         }
 
 
@@ -243,7 +248,6 @@ if(current_user_can('manage_options')){
             "guide_description_color" => $guide_description_color,
             "guide_description_fontsize" => $guide_description_fontsize,
             "guide_background_image" => $guide_background_image,
-            "guide_background_image_url" => $guide_background_image_url,
             "guide_background_startcolor" => $guide_background_startcolor,
             "guide_background_endcolor" => $guide_background_endcolor,
             "guide_background_direction" => $guide_background_direction,
@@ -276,6 +280,7 @@ if(current_user_can('manage_options')){
             "card_radio_border_hover_color" => $card_radio_border_hover_color,
             "card_radio_selected_bg_color" => $card_radio_selected_bg_color,
             "card_radio_selected_icon_color" => $card_radio_selected_icon_color,
+            "auto_move_to_next_filter" => $auto_move_to_next_filter,
             "slider_label_color" => $slider_label_color,
             "slider_label_fontsize" => $slider_label_fontsize,
             "slider_image_height" => $slider_image_height,
@@ -296,7 +301,9 @@ if(current_user_can('manage_options')){
             "result_more_text" => $result_more_text,
             "result_empty_text" => $result_empty_text,
             "no_result_primary_text" => $no_result_primary_text,
-            "no_result_secondary_text" => $no_result_secondary_text);
+            "no_result_secondary_text" => $no_result_secondary_text,
+            "result_start_over_text" => $result_start_over_text,
+            "result_start_over_text_color" => $result_start_over_text_color);
 
 
     }else{

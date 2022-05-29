@@ -8,7 +8,10 @@ if(current_user_can('manage_options')){
 
         $element_id = sanitize_text_field($_REQUEST['element_id']);
         $card_label = sanitize_text_field($_REQUEST['card_label']);
+
         $card_image = sanitize_text_field($_REQUEST['card_image']);
+        $card_image = empty($card_image) ? " " : $card_image;
+
         $behavior = sanitize_text_field($_REQUEST['behavior']);
 
         $card_label = empty($card_label) ? " " : $card_label;
