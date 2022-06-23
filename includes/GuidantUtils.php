@@ -35,6 +35,7 @@ if ( ! class_exists( 'GuidantUtils' ) ) {
             $postAttributes[] = array("id" => "post_date", "text" => "[Post] Post Date");
             $postAttributes[] = array("id" => "post_modified", "text" => "[Post] Post Modified");
             $postAttributes[] = array("id" => "post_author", "text" => "[Post] Post Author");
+            $postAttributes[] = array("id" => "post_tags", "text" => "[Post] Post Tags");
             return $this->filterBySearch($postAttributes, $search);
         }
 
@@ -199,6 +200,16 @@ if ( ! class_exists( 'GuidantUtils' ) ) {
                 if (sizeof($listUsers) > 0) {
                     foreach ($listUsers as $singleUser) {
                         $attributeValues[] = array("id" => $singleUser->display_name, "text" => $singleUser->display_name);
+                    }
+                }
+            }
+
+
+            if($attribute_name == "post_tags") {
+                $listTags = get_tags(array('hide_empty' => false));
+                if (sizeof($listTags) > 0) {
+                    foreach ($listTags as $singleTag) {
+                        $attributeValues[] = array("id" => $singleTag->name, "text" => $singleTag->name);
                     }
                 }
             }

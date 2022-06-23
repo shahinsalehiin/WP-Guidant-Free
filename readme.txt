@@ -5,7 +5,7 @@ Tags: guide plugin, wp guidant, guided selling, recommendation, forms
 Requires PHP: 5.6
 Requires at least: 5.1
 Tested up to: 6.0
-Stable tag: 1.0.5
+Stable tag: 1.0.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -287,6 +287,9 @@ screenshot-13.png
 screenshot-14.png
 
 == Changelog ==
+
+= 1.0.6 =
+1. Updated: Targeting using Post Tags are fixed.
 
 = 1.0.5 =
 1. Updated: Compatibility with WordPress 6.0

@@ -75,7 +75,7 @@ if ( ! class_exists( 'GuidantRenderer' ) ) {
                 $sql = "SELECT p.ID as post_id FROM {$wpdb->prefix}posts as p, {$wpdb->prefix}postmeta as m WHERE ";
 
 
-            }else if($attribute_type == "post_category" || $attribute_type == "woocommerce_category" || $attribute_type == "woocommerce_attributes"  || $attribute_type == "woocommerce_tags"){
+            }else if($attribute_type == "post_category" || $attribute_type == "post_tags" || $attribute_type == "woocommerce_category" || $attribute_type == "woocommerce_attributes"  || $attribute_type == "woocommerce_tags"){
 
                 $sql = "SELECT p.ID as post_id FROM {$wpdb->prefix}posts as p, {$wpdb->prefix}terms as t, {$wpdb->prefix}term_taxonomy as tt, {$wpdb->prefix}term_relationships as tr WHERE ";
 
@@ -93,6 +93,10 @@ if ( ! class_exists( 'GuidantRenderer' ) ) {
 
             if($attribute_type == "post_category") {
                 $sql .= "(t.name {$matching_type_and_value} AND tt.term_id = t.term_id AND tt.taxonomy = 'category' AND tr.term_taxonomy_id = t.term_id AND p.ID = tr.object_id)";
+            }
+
+            if($attribute_type == "post_tags") {
+                $sql .= "(t.name {$matching_type_and_value} AND tt.term_id = t.term_id AND tt.taxonomy = 'post_tag' AND tr.term_taxonomy_id = t.term_id AND p.ID = tr.object_id)";
             }
 
             if($attribute_type == "post_title") {
