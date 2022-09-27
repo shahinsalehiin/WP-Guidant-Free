@@ -62,6 +62,8 @@ if ( ! class_exists( 'GuidantRenderer' ) ) {
         {
             global $wpdb;
 
+            $value = str_replace("'", "\'", $value);
+
             $result = array();
             $matching_type_and_value = $this->queryMatchingTypeValue($matching_type, $value);
             $sql = "SELECT p.ID as post_id FROM {$wpdb->prefix}posts as p, {$wpdb->prefix}postmeta as m, {$wpdb->prefix}terms as t, {$wpdb->prefix}term_taxonomy as tt, {$wpdb->prefix}term_relationships as tr WHERE ";
@@ -190,6 +192,7 @@ if ( ! class_exists( 'GuidantRenderer' ) ) {
         {
             $cleared_post_ids = array();
             global $wpdb;
+
             $post_id_str = implode("','",$post_id_arr);
             $sql = $wpdb->prepare( "SELECT * FROM {$wpdb->prefix}posts WHERE post_status = 'publish' 
                                     AND ID IN ('".$post_id_str."') ORDER BY ID DESC", array() );

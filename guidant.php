@@ -3,7 +3,7 @@
  * Plugin Name:       WP Guidant
  * Plugin URI:        https://wpcommerz.com/guidant/
  * Description:       Build Multi-step Guided Selling Process & Smart Forms to Convert 10X More Traffic Into Leads & New Customers.
- * Version:           1.0.6
+ * Version:           1.0.8
  * Author:            WPCommerz
  * Author URI:        https://wpcommerz.com/
  * License:           GPL-2.0+
@@ -18,7 +18,7 @@ if ( ! defined( 'WPINC' ) ) {
     die;
 }
 
-define( 'GUIDANT_VERSION', '1.0.6' );
+define( 'GUIDANT_VERSION', '1.0.8' );
 defined( 'GUIDANT_PATH' ) or define( 'GUIDANT_PATH', plugin_dir_path( __FILE__ ) );
 defined( 'GUIDANT_URL' ) or define( 'GUIDANT_URL', plugin_dir_url( __FILE__ ) );
 defined( 'GUIDANT_BASE_PATH' ) or define( 'GUIDANT_BASE_PATH', plugin_basename(__FILE__) );
