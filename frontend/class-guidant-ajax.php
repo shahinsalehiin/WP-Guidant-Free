@@ -12,6 +12,8 @@ if (!class_exists('GuidantFrontendAjax')) {
         protected $settings;
         protected $utils;
 
+        // added_in_109
+        protected $renderer;
         public function __construct($frontend_class)
         {
             $this->settings = $frontend_class->settings;

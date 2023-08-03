@@ -11,6 +11,9 @@ if (!class_exists('GuidantFront')) {
         public $settings;
         public $utils;
 
+        // added_in_109
+        public $renderer;
+
         public function __construct()
         {
             $this->settings = new GuidantSettings();

@@ -17,6 +17,9 @@ if(isset($_REQUEST['security']) && isset($_REQUEST['guide_id']) && isset($_REQUE
     $display_result = $this->settings->updateGuideSettings($guide_id, "display_result");
     $display_result = ($display_result == Null) ? "true" : $display_result;
 
+    $result_maximum = $this->settings->updateGuideSettings($guide_id, "result_maximum");
+    $result_maximum = ($result_maximum == Null) ? "-1" : $result_maximum;
+
     $submission_tracking = $this->settings->updateGuideSettings($guide_id, "submission_tracking");
     $submission_tracking = ($submission_tracking == Null) ? "enable" : $submission_tracking;
 
@@ -141,7 +144,7 @@ if(isset($_REQUEST['security']) && isset($_REQUEST['guide_id']) && isset($_REQUE
 
 
         /* Clear IDs not public/published post, pop the max ID into best result */
-        $filtered_post_ids = $this->renderer->clearUnNecessaryIds($filtered_post_ids);
+        $filtered_post_ids = $this->renderer->clearUnNecessaryIds($filtered_post_ids, $result_maximum);
         sort($filtered_post_ids);
         $best_result_id = array();
         $best_result_id[] = array_pop($filtered_post_ids);

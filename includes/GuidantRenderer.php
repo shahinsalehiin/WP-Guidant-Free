@@ -188,14 +188,16 @@ if ( ! class_exists( 'GuidantRenderer' ) ) {
         }
 
 
-        public function clearUnNecessaryIds($post_id_arr)
+        public function clearUnNecessaryIds($post_id_arr, $limit = "-1")
         {
             $cleared_post_ids = array();
             global $wpdb;
 
+            $limit_sql = $limit != "-1" ? " LIMIT ".$limit : "";
+
             $post_id_str = implode("','",$post_id_arr);
             $sql = $wpdb->prepare( "SELECT * FROM {$wpdb->prefix}posts WHERE post_status = 'publish' 
-                                    AND ID IN ('".$post_id_str."') ORDER BY ID DESC", array() );
+                                    AND ID IN ('".$post_id_str."') ORDER BY ID DESC".$limit_sql, array() );
 
             $listPosts = $wpdb->get_results($sql);
             if (sizeof($listPosts) > 0) {
@@ -228,21 +230,34 @@ if ( ! class_exists( 'GuidantRenderer' ) ) {
                     $single_post_html = "";
                     foreach ($list_result_attributes as $single_result_attribute) {
                         $attribute_name = $single_result_attribute['attribute_type'];
-
-                        $prefix = $single_result_attribute['prefix'];
-                        if(strlen(trim($prefix)) > 0){
-                            $prefix = $prefix." ";
+                        if(isset($single_result_attribute['prefix'])){
+                            $prefix = $single_result_attribute['prefix'];
+                            if(strlen(trim($prefix)) > 0){
+                                $prefix = $prefix." ";
+                            }
+                        }else{
+                            $prefix = " ";
                         }
 
-                        $button_text = $single_result_attribute['button_text'];
-                        if(strlen(trim($button_text)) == 0){
+
+                        if(isset($single_result_attribute['button_text'])){
+                            $button_text = $single_result_attribute['button_text'];
+                            if(strlen(trim($button_text)) == 0){
+                                $button_text = "View";
+                            }
+                        }else{
                             $button_text = "View";
                         }
 
-                        $image_height = $single_result_attribute['image_height'];
-                        if(strlen(trim($image_height)) == 0){
+                        if(isset($single_result_attribute['image_height'])){
+                            $image_height = $single_result_attribute['image_height'];
+                            if(strlen(trim($image_height)) == 0){
+                                $image_height = "200";
+                            }
+                        }else{
                             $image_height = "200";
                         }
+
 
                         if($attribute_name == "post_category") {
                             $post_categories = get_the_terms( $singlePost->ID, 'category' );
