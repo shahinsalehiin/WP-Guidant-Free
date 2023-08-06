@@ -388,7 +388,18 @@
 
             <div class="guidant_tab_item">
 
-
+                <div class="guidant_form_group_small wider_space pro_field">
+                    <h4> Card Size <?php $this->guidant_field_info("Select card size."); ?></h4>
+                    <div>
+                        <select id="guidant_guides_update_guide_card_size">
+                            <option value="standard">Standard</option>
+                            <option value="large">Large</option>
+                            <option value="extra_large">Extra Large</option>
+                        </select>
+                    </div>
+                    <span class="pro_tag"><strong>Pro</strong></span>
+                </div>
+                
                 <div class="guidant_form_group_small wider_space">
                     <h4> Card Image Height </h4>
                     <div>
@@ -411,6 +422,24 @@
                     <h4> Label Font Size </h4>
                     <div>
                         <input type="number" id="guidant_guides_update_card_label_fontsize">
+                        <span class="guidant-px"> px </span>
+                    </div>
+                    <span class="pro_tag"><strong>Pro</strong></span>
+                </div>
+                <div class="guidant_form_group_small wider_space pro_field">
+                    <h4> Description Color </h4>
+                    <div class="guidant-color-container">
+                        <input type="color" id="guidant_guides_update_card_description_color">
+                        <label for="guidant_guides_update_card_description_color">Select Color</label>
+                    </div>
+                    <span class="pro_tag"><strong>Pro</strong></span>
+                </div>
+
+
+                <div class="guidant_form_group_small wider_space pro_field">
+                    <h4> Description Font Size </h4>
+                    <div>
+                        <input type="number" id="guidant_guides_update_card_description_fontsize" value="16">
                         <span class="guidant-px"> px </span>
                     </div>
                     <span class="pro_tag"><strong>Pro</strong></span>

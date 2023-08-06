@@ -472,6 +472,7 @@ ul.guidant-breadcrumb li a:hover {
     background: #e3e2e2;
 }
 
+.guidant_form_group.pro_field.card--description .pro_tag,
 .guidant_form_group_small.pro_field .pro_tag {
     color: #DE5819;
     font-size: 15px;
@@ -479,9 +480,6 @@ ul.guidant-breadcrumb li a:hover {
     margin-left: 15px;
     cursor: pointer;
 }
-
-
-
 
 
 .guidant_form_group_small h4 {

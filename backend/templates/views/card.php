@@ -23,6 +23,11 @@
                     <label for="guidant-gname"> Card Label</label>
                     <input type="text" id="guidant_card_tab_page_label" placeholder="Text to be displayed inside card">
                 </div>
+                
+                <div class="guidant_form_group pro_field card--description">
+                    <label for="guidant-gname"> Card Description <span class="pro_tag"><strong>Pro</strong></span></label>
+                    <input type="text" id="guidant_card_tab_page_description" placeholder="Text to be displayed inside card">
+                </div>
 
                 <div class="guidant_form_group">
                     <label for="guidant-cardfilset-imglab"> Card Image</label>
