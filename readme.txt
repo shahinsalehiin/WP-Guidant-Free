@@ -290,7 +290,9 @@ screenshot-14.png
 
 = 1.1.0 =
 1. Added: Card Description feature.
-2. Fixed minor bugs
+2. Added: Make Card Size dynamic.
+3. Improved: Performance Improved.
+4. Fixed minor bugs.
 
 = 1.0.9 =
 1. Improved: Optimize database query to perform better.
