@@ -1,0 +1,53 @@
+/*------------------------------------------------------------------
+Project: WP Guidant Admin global
+Version: 1.0
+-------------------------------------------------------------------*/
+
+/* Index of CSS
+==================================================
+1. Admin notice styles
+
+** Responsive Styles
+*/
+
+
+/* Admin notice styles*/
+.guidant-offer--notice{
+    border: 0;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-image: url("../../assets/img/haloween-guidant.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.guidant-offer--notice a {
+    display: inline-block;
+    width: 100%;
+    min-height: 75px;
+}
+.guidant-offer--notice .notice-dismiss:before {
+    color: red;
+}
+.guidant-offer--notice img{
+    display: none;
+}
+
+
+/* Admin notice styles end*/
+
+/* Responsive Styles */
+@media (max-width: 1199px) {
+    .guidant-offer--notice{
+        background-image: url("../../assets/img/haloween-guidant-mobile.jpg");
+        background-size: contain;
+    }
+    .guidant-offer--notice .notice-dismiss{
+        padding: 1px;
+    }
+    .guidant-offer--notice a{
+        min-height: 40px;
+    }
+}
+  

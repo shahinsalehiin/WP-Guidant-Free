@@ -1387,7 +1387,43 @@ ul.guidant-breadcrumb li a:hover {
     align-self: center;
 }
 
+/* Guidant pro popup new styles*/
+#guidant_popup_pro.guidant-image-popup .guidant_modal_pro{
+    width: 450px !important;
+    max-width: 450px !important;
+    min-width: 320px !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border-radius: 18px;
+    border: 0px;
+}
+#guidant_popup_pro.guidant-image-popup .guidant_modal_pro a{
+    margin-top: 0 !important;
+    padding: 0;
+    background-color: transparent;
+    line-height: 0;
+    border-radius: 18px;
+}
 
+#guidant_popup_pro.guidant-image-popup .guidant_modal_pro img{
+    max-width: 100%;
+    border-radius: 18px;
+}
+#guidant_popup_pro.guidant-image-popup .guidant_modal_pro a.close {
+    display: inline;
+    color: #8f8e8e;
+    font-size: 35px;
+    cursor: pointer;
+    position: absolute;
+    color: black;
+    right: 10px;
+    top: 10px;
+    font-weight: 700;
+    text-decoration: none;
+    line-height: 0.6;
+    display: inline-block;
+}
+/* Guidant pro popup new styles end */
 
 
 #guidant_modal_submission_view {

@@ -1,19 +1,26 @@
-=== WP Guidant ===
-Contributors: wpcommerz, darklup, devmahbub
+=== WP Guidant | Guided Selling & Product Recommendation Quiz Plugin ===
+Contributors: wpcommerz, darklup, hivesupport, shahinsalehiin, marufmks
 Donate link: https://wpcommerz.com/guidant/
-Tags: guide plugin, wp guidant, guided selling, recommendation, forms
-Requires PHP: 5.6
-Requires at least: 5.1
-Tested up to: 6.2.2
-Stable tag: 1.1.0
+Tags: product recommendation, quiz builder, guided selling, guide plugin, product recommendation quiz
+Requires PHP: 7.4
+Requires at least: 6.5
+Tested up to: 6.8.1
+Stable tag: 1.2.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
+Boost conversions with WP Guidant! Drive sales using guided selling, product recommendations, and quizzes to help customers find the perfect choice.
+
 == Description ==
 
-<p>Build Multi-step Guided Selling Process & Smart Forms to Convert 10X More Traffic Into Leads & New Customers. WP Guidant is a guided selling process that lets you create guides to display products with smart filters. This is a revolutionary plugin that can convert a whole shopping website into a selling system that interacts with users, lets them filter through the data with simple gestures, and find their desired products in seconds.</p>
 
-<p>WP Guidant is the plugin if you are looking for the easiest way to introduce your products or services to visitors. The whole process works within your current database, picking up everything you might want to add to the filters. With WP Guidant, you can build a step-by-step guide as well as conversational forms with a dynamic form builder system.</p>
+<p>Get ready to take your WooCommerce store ecosystem to another level with WP Guidant.</p>
+
+<p>Boost conversions with WP Guidant! Drive purchases through guided selling, bespoke product recommendations, and interactive quizzes funneling customers to perfect choices.</p>
+
+<p>WP Guidant is a prominent product recommendation quiz & <a href="https://wpcommerz.com/wp-guidant/" target="_blank">guided selling plugin</a> for online stores. You can create comprehensive sales funnels and multi-step forms for lead generation. It’s very easy to create step by step guides with WP Guidant.</p>
+
+<p>Each guide is built with various filters, cards, sliders & forms. That can make the guides more effective, so the customers can enjoy the steps while they are following the guide. However, WP Guidant has options for generating unlimited numbers of guides with various cards & filters.</p>
 
 [youtube https://www.youtube.com/watch?v=0JYlSczrUDQ]
 
@@ -22,165 +29,198 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 <p>The plugin can filter a wide range of data, display the filters in a card or slider format as well as mandatory form fields, capable of filling all your needs. This is the most versatile plugin that saves you from making endless product categories and simply adds up everything within a few guided selling processes. </p>
 
 
+<h3>🔥 KILLER FEATURES OF WP GUIDANT</h3>
 
-
-<h3>WHAT'S WP GUIDANT FOR</h3>
-
-<p>The WP Guidant is a guided selling process builder for WordPress. The guided process is like a step-by-step question session for the users. By picking a choice in every step, the user gets close to the most desired answer they seek.</p>
-<p>Simply, WP Guidant takes user input on the filters and displays the closest things (post, product, etc) that match the clients’ criteria. The whole process takes only a couple of seconds but the result is extraordinary!</p>
-<p>Simply, WP Guidant filters every product on your site and picks the most suitable ones for you. Visitors just need to go through the steps to the end result. Everything is completed in a single minute.</p>
-
-
-
-<h3>KILLER FEATURES OF WP GUIDANT</h3>
 <ol>
 	<li>
-	<strong>Easy Guided Selling</strong>
-	<p>Make a super easy guided and recommendation process out of a variety of products, posts, etc. The guide is capable of letting the user pick their choices using a fast-paced step-by-step filter system. WP Guidant sweeps through the whole site data in seconds to find the right product.</p>
+		<strong>Easy Product Recommendation Quiz</strong>
+		<p>Make a super easy guide and product recommendation process out of a variety of products, posts, etc. It will help the users to find their desired content within a few minutes.</p>
 	</li>
-
 	<li>
-	<strong>Easy Product Sorting</strong>
-	<p>WP Guidant integrates with WooCommerce and empowers you to quickly sort out products using the guided system. Also works on posts, pages, forms, etc. No matter how messed up your site is, WP Guidant will work its magic.</p>
+		<strong>Easy Product Sorting</strong>
+		<p>WP Guidant integrates with WooCommerce and empowers you to quickly sort out products using the guided system. Also works on posts, pages, conversational forms, etc.</p>
 	</li>
-
 	<li>
-	<strong>Lots of Filters</strong>
-	<p>WP Guidant can access most of the data on your WordPress site (post, content, WooCommerce) and turn them into filters. When you have a lot of filter options, you can add more numbers behind each guide and provide more choices for the users.</p>
+		<strong>Unlimited Filters</strong>
+		<p>Create sales funnels & and conversational forms with unlimited numbers of filters. Make your guide more informative and useful.</p>
 	</li>
-
 	<li>
-	<strong>Cards & Sliders</strong>
-	<p>WP Guidant makes the most prominent filter system using user-accessible cards and sliders. Visitors just need to choose their cards or scroll the slider to step forward into the guide system and end up with the product they wanted. Fast & Easy!</p>
+		<strong>Cards & Sliders</strong>
+		<p>WP Guidant makes the most prominent filter system using user-accessible cards and sliders. Visitors just need to choose their cards or scroll the slider to step forward into the guide system and end up with the product they want. Fast & Easy!</p>
 	</li>
-
 	<li>
-	<strong>Conversational Forms</strong>
-	<p>Create dynamic forms that collect and arrange user data for future purposes. Using our WP Guidant conversational forms, you can create lead databases according to the user’s interests and categories. The best option to build leads to gain more customers.</p>
+		<strong>Ready-made Templates</strong>
+		<p>WP Guidant has 10+ ready made guide templates with multiple filters, cards & forms. Also, you can customize them based on your demand.</p>
 	</li>
-
 	<li>
-	<strong>Smart Conditional Logic</strong>
-	<p>Set conditional logic to your guided selling process and only show the results according to what the user chose. This function can control what a user can see in the next based on their behavior on the previous filter.</p>
+		<strong>Lead Generation Forms</strong>
+		<p>Make step-by-step interactive smart forms based on user intents with various form filters. WP Guidant can be considered as a WordPress form plugin. </p>
 	</li>
-
 	<li>
-	<strong>WooCommerce Integrated</strong>
-	<p>WP Guidant integrates the whole database of WooCommerce and lets you control the various data of your shop. Make filters out of products, prices, categories, tags, and many more. It helps visitors experience a boosted product purchasing experience.</p>
+		<strong>Lead Generation Forms</strong>
+		<p>Make step-by-step interactive smart forms based on user intents with various form filters. WP Guidant can be considered as a WordPress form plugin. </p>
 	</li>
-
 	<li>
-	<strong>Custom Result Attributes</strong>
-	<p>The output of the guided selling process can be customized to show the defined values set previously from the admin end. Result attributes can be added, changed, and rearranged by their placement order. </p>
+		<strong>Smart Conditional Logic</strong>
+		<p>With smart conditional logic, you can easily determine specific results for a specific guide. Also, this will help you to include/exclude any product, category, and post. Trigger the result based on the previous filter's intents.</p>
 	</li>
-
 	<li>
-    	<strong>MailChimp Integration</strong>
-    	<p>Connect Mailchimp with created form to automatically save subscribers into Mailchimp Contacts. Manage and Map form fields with Mailchimp Custom Tags to build a powerful contact list for marketing purpose. </p>
-    </li>
-
-    <li>
-        <strong>Popup Builder</strong>
-        <p>Display the whole Guided Selling Process including multiple filters into a Popup. Easy to customize popup handlers and popup design. Popups can be displayed by shortcode, so no matter where it is needed, can be placed.</p>
-    </li>
-
-    <li>
-        <strong>Guide Import/Export</strong>
-        <p>Export guides with it's filters, cards, sliders and form elements and their customization. Powerful guide importing functionality to make a proper duplicate of the exported guide for faster ready-to-go option.</p>
-    </li>
-
-    <li>
-        <strong>Ready-made Templates</strong>
-        <p>10+ ready-made templates you can choose from and create a proper guide with pre-built filters, cards, sliders and form elements and their complete customization with just a click.</p>
-    </li>
-
-    <li>
-        <strong>Webhook</strong>
-        <p>Do real-time data communication with popular web apps or services with the webhook feature. You can send and store user inputs to MailChimp, Mailjet, Google Sheets and many more through popular services such as Pabbly, Zapier etc. Take advantage of web automation to power your business. </p>
-    </li>
+		<strong>WooCommerce Integrated</strong>
+		<p>WP Guidant integrates the whole database of WooCommerce and lets you control the various data of your shop. Make filters out of products, prices, categories, tags, and many more. It helps visitors experience a boosted product purchasing experience.</p>
+	</li>
+	<li>
+		<strong>Custom Result Attributes</strong>
+		<p>Customize the guide result based on attributes with different values and matching types. Result attributes can be added, changed, and rearranged by their placement order.</p>
+	</li>
+	<li>
+		<strong>MailChimp Integration</strong>
+		<p>Connect Mailchimp with a created form to automatically save subscribers into Mailchimp Contacts. Manage and Map form fields with Mailchimp Custom Tags to build a powerful contact list for marketing purposes.</p>
+	</li>
+	<li>
+		<strong>Popup Builder</strong>
+		<p>Display the whole guided selling System including multiple filters into a Popup. Easy to customize popup design and styles. </p>
+	</li>
+	<li>
+		<strong>Guide Import/Export</strong>
+		<p>Export guides with their filters, cards, sliders, and form elements and their customization. Powerful guide importing functionality to make a proper duplicate of the exported guide for a faster ready-to-go option. </p>
+	</li>
 
 </ol>
 
+<h3>Integration with 1000+ Tools</h3>
 
-
+<p>Do real-time data communication with popular web apps or services with the webhook feature. You can send and store user inputs to MailChimp, Mailjet, Google Sheets, and more than 1000+ tools through <a href="https://www.pabbly.com/connect/integrations/wp-guidant/" target="_blank">Pabbly</a></p>
 
 <h3>WP GUIDANT GUIDED SELLING PROCESS INCLUDES</h3>
+
 <ol>
-	<li><strong>Full Customization:</strong> Customize the whole guide, paint it with any color you want, and increase the dimensions.</li>
-	<li><strong>Filter Selection:</strong> Use cards, sliders, or forms as filters to build the guided selling process.</li>
-	<li><strong>Guide Design:</strong> Change the Guide background into plain colors, gradients, or put a fine picture as the background.</li>
-	<li><strong>Filter Design:</strong> While the filter interface contains buttons, texts, borders, & backgrounds; you can change their colors individually.</li>
-	<li><strong>Card Design:</strong> Each card in WP Guidant can be customized through color, border, and background design. Also includes the font size and image height.</li>
-	<li><strong>Slider Design:</strong> The sliders are easy to access with their colorful appearance and beautiful background image.</li>
-	<li><strong>Custom Meta Filtering:</strong> Create compatible guides for any website by filtering target meta values presented by other plugins.</li>
-	<li><strong>Conditional Logic:</strong> Display the next filter based on the user choice in the previous filter, that’s the conditional logic of WP Guidant.</li>
-	<li><strong>Submission Tracking:</strong> Track user behavior through each guide, keep data logs, and build a sales funnel by analyzing the guide data.</li>
-	<li><strong>Email Notification:</strong> Send customized automated email to users on guide completion. Notification via email to admin can also be set.</li>
-	<li><strong>Custom CSS:</strong> Feature to add custom CSS to change the default design of guide, filters, cards, sliders and forms.</li>
-	<li><strong>Auto Redirect on Submission:</strong> Set custom URL to redirect page automatically on guide submission to manage proper flow in necessary.</li>
-	<li><strong>Result:</strong> Results can be displayed/removed at the end of the process including the maximum number of outputs, headline, & completion texts.</li>
-	<li><strong>Result Attributes:</strong> Choose what to display on the result page, including thumbnail, price, category, title, excerpt, etc.</li>
-	<li><strong>WPML:</strong> The plugin supports multilingual websites. Everything on it can be easily converted to the language you speak.</li>
-	<li><strong>LMS:</strong> WP Guidant can be your most treasured LMS course selling guide for initiating a more precision selling system.</li>
-	<li><strong>ACF Support:</strong> The guided selling process supports Advanced Custom Fields by WordPress and makes them into guides.</li>
-	<li><strong>Post Data:</strong> WP Guidant reads and integrates all post data including titles, categories, tags, and can use them inside the guides.</li>
-	<li><strong>Well Documented:</strong> We have the necessary documents to show our users how easy it is to operate the WP Guidant plugin.</li>
+	<li>
+		<p><strong>Full Customization:</strong> Customize all the elements of the guide based on user demands & make it more essential.</p>
+	</li>
+	<li>
+		<p><strong>Filter Selection:</strong>  Choose multiple filters for the guides. Include various cards and sliders in it.</p>
+	</li>
+	<li>
+		<p><strong>Guide Design:</strong> Change the Guide background into plain colors, and gradients, or put a fine picture as the background.</p>
+	</li>
+	<li>
+		<p><strong>Filter Design:</strong> While the filter interface contains buttons, texts, borders, & backgrounds; you can change their colors individually.</p>
+	</li>
+	<li>
+		<p><strong>Card Design:</strong> Each card in WP Guidant can be customized through color, border, and background design. Also includes the font size and image height.</p>
+	</li>
+	<li>
+		<p><strong>Slider Design:</strong> The sliders are easy to access with their colorful appearance and beautiful background image.</p>
+	</li>
+	<li>
+		<p><strong>Custom Field:</strong> Create a custom field for the card value. Specify the guide results more strategically.</p>
+	</li>
+	<li>
+		<p><strong>Submission Tracking:</strong> Track user behavior through each guide, keep data logs, and build a sales funnel by analyzing the guide data.</p>
+	</li>
+	<li>
+		<p><strong>Email Notification:</strong> Easily send the automated notification email after guide completion. Notification via email to admin can also be set.</p>
+	</li>
+	<li>
+		<p><strong>Custom CSS:</strong> Independently change the guide design with custom CSS support. Sync the design with your site looks. </p>
+	</li>
+	<li>
+		<p><strong>Auto Redirect on Submission:</strong> Set custom URL to redirect page automatically on guide submission to manage proper flow if necessary.</p>
+	</li>
+	<li>
+		<p><strong>Result:</strong> You can easily control various factors of the results such as setup maximum results, changing result page attributes, changing result page color, etc.</p>
+	</li>
+	<li>
+		<p><strong>LMS:</strong> WP Guidant can create the most treasured LMS course selling guide for initiating a more precision selling system.</p>
+	</li>
+	<li>
+		<p><strong>ACF Support:</strong> This guide plugin supports Advanced Custom Fields by WordPress and makes them into guides.</p>
+	</li>
+	<li>
+		<p><strong>Post Data:</strong> WP Guidant reads and integrates all post data including titles, categories, and tags, and can use them inside the guides.</p>
+	</li>
+	<li>
+		<p><strong>Well Documented:</strong> We have the necessary <a href="https://wpcommerz.com/docs/" target="_blank">documents</a> to show our users how easy it is to operate the WP Guidant plugin.</p>
+	</li>
 
 </ol>
 
+<h3>WHO CAN USE WP GUIDANT?</h3>
+
+<p>WP Guidant is specially designed for every WordPress & WooCommerce enthusiast. It’s not only focused on a single feature. From creating conversational smart forms to an advanced product recommendation process, you can do anything with It! To improve your online store or website user & purchasing experience WP Guidant can be the right companion for you. Just install the plugin from the WordPress plugin store and boost your conversion rate.
+</p>
+
+<h3>Why Choose WP Guidant?</h3>
+
+<h4>Smart User Interaction</h4>
+
+<p>WP Guidant lets your users interact with your website. With a series of quick question/answer guides, your visitors can find what they are seeking themselves. It cheers up the visitors to play with your guide.
+</p>
+
+<h4>Boost Overall Growth</h4>
+
+<p>Everyone wants to boost the growth of their websites or online stores. Here the WP Guidant plays a crucial role. It can fulfill the users demands and help to grow a bigger audience. Which impacts boosting sales of the store. WP Guidant is also useful for recovering abandoned carts.
+</p>
+
+<h4>Saves Time on the User-end</h4>
+
+<p>Nobody wants to spend hours looking for a single product out of a thousand available. WP Guidant cuts the required time to search the mountain of goods and guides the visitors to their desired products with user interaction.
+</p>
+
+<h4>Search Engine Friendly</h4>
+
+<p>The guided sales process directly influences people to act on your website. Pulling more people to act upon their arrival on the site will stay on the positive side of the search engine crawlers.
+</p>
+
+<h4>Virtual Sales Advisor</h4>
+
+<p>“A picture worth a thousand words” – Like the phrase, WP Guidant grabs the visitors by the hand and guides them through the whole process, explaining bit by bit, creating a natural user interaction environment. AKA, your virtual salesman!
+</p>
+
+<h3> Use Case</h3>
+
+<p>You can use WP Guidant on multiple purposes for various websites. You can checkout all these examples from the below section.
+</p>
 
 
+<p>➡️ <a href="https://wpcommerz.com/guidant-demo/e-commerce-demo/" target="_blank">Ecommerce </a></p>
+<p>➡️ <a href="https://wpcommerz.com/guidant-demo/real-estate-demo/" target="_blank">Real Estate </a></p>
+<p>➡️ <a href="https://wpcommerz.com/guidant-demo/seo-service-demo/" target="_blank">SEO Service </a></p>
+<p>➡️ <a href="https://wpcommerz.com/guidant-demo/customer-feedback-demo/" target="_blank">Customer Feedback </a></p>
+<p>➡️ <a href="https://wpcommerz.com/guidant-demo/rent-a-car-demo/" target="_blank">Rent a Car </a></p>
+<p>➡️ <a href="https://wpcommerz.com/guidant-demo/car-purchase-demo/" target="_blank">Car Purchase </a></p>
+<p>➡️ <a href="https://wpcommerz.com/guidant-demo/webinar-registration-demo/" target="_blank">Webinar Registration </a></p>
+<p>➡️ <a href="https://wpcommerz.com/guidant-demo/web-agency-contact-demo/" target="_blank">Web Agency Contact </a></p>
+<p>➡️ <a href="https://wpcommerz.com/guidant-demo/retirement-plan-demo/" target="_blank">Retirement Plan </a></p>
 
+<h4>Also, WP Guidant can be used for industries like - </h4>
 
-<h3>WHO CAN USE WP GUIDANT</h3>
-<p>As a versatile plugin for WordPress, anybody can use WP Guidant on their websites, especially online marketers, entrepreneurs, shop sellers, etc. The plugin can read data directly from WordPress without any separation. That means the plugin will automatically sort out the data it can filter right at the moment of installation.</p>
-<p>No need to import anything. WP Guidant integrates with the existing database to build the guide system.</p>
-<p><strong>WP Guidant can filter - </strong></p>
-<ol>
-	<li><strong>Post Data:</strong> Post Title, Post Type, Publishing Date, Post Category, Author, Thumbnail, Excerpt, Modified Date, Permalink, etc.</li>
-	<li><strong>WooCommerce:</strong> Product Name, Product Price, Sale Price, Available Stock, Product Category, Release Date, Permalink, Product Excerpt, Product Rating, etc.</li>
-	<li>ACF - Advanced Custom Fields</li>
-	<li>WP Guidant Custom Fields</li>
-	<li>Custom Meta Fields</li>
-	<li>More….</li>
-</ol>
-
-
-
-
-<h3>ADVANTAGES OF WP GUIDANT</h3>
-<ol>
+<ul>
 	<li>
-	<strong>Smart User Interaction</strong>
-	<p>WP Guidant lets your users interact with your website. With a series of quick question/answer guides, your visitors can find what they are seeking themselves. It cheers up the visitors to play with your guide.</p>
+		<p><strong>Clothes & Shopping.</strong></p>
 	</li>
-
 	<li>
-	<strong>Saves Time On The User-end</strong>
-	<p>Nobody wants to spend hours looking for a single product out of a thousand available. WP Guidant cuts the required time to search the mountain of goods and guides the visitors to their desired products with user interaction.</p>
+		<p><strong>Healthcare & Medicine.</strong></p>
 	</li>
-
 	<li>
-	<strong>Influence Mutual Exchange</strong>
-	<p>WP Guidant makes a unique interface that nurtures a mutual feeling inside the users and makes them think to give something in return for their interaction. It’s a positive sentiment that leads to a higher conversion rate.</p>
+		<p><strong>Research & Publications.</strong></p>
 	</li>
-
 	<li>
-	<strong>Search Engine Friendly</strong>
-	<p>The Guided Selling Process directly influences people to act on your website. Pulling more people to act upon their arrival on the site, you will stay on the positive side of the search engine crawlers.</p>
+		<p><strong>Entertainment and Subscription.</strong></p>
 	</li>
-
 	<li>
-	<strong>Virtual Sales Advisor</strong>
-	<p>"A picture worths a thousand words" - Like the phrase, WP Guidant grabs the visitors by the hand and guides them through the whole process, explaining bits by bits, creating a natural user interaction environment. AKA, your virtual salesman!</p>
+		<p><strong>Books & Magazine.</strong></p>
 	</li>
-
-</ol>
+	<li>
+		<p><strong>Food & Cafe Industries.</strong></p>
+	</li>
+</ul>
 
 
 <h3>🔥 WP GUIDANT FEATURED BY TOP REVIEWER:</h3>
 
-<p>Lot of love by WPLearningLab and DecisiveMarketer.</p>
+<p>Lot of love by WPLearningLab, WP Simple Hacks and DecisiveMarketer.</p>
+[youtube https://www.youtube.com/watch?v=puDIXLNRKXU]
 [youtube https://www.youtube.com/watch?v=m1B4I1irRs4]
 [youtube https://www.youtube.com/watch?v=-eAZJzjG3Jg]
 
@@ -210,24 +250,32 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 
 
-<h3>GO BEYOND</h3>
+<h3>WHAT'S NEXT</h3>
 
 <p>If you love WP Guidant, have a look at the other awesome plugins for WordPress-</p>
 
-<p><a href="https://darklup.com/" target="_blank"><strong>Darklup</strong></a> – A ground-breaking dark mode plugin for WordPress, Elementor, Visual Composer, and all other page builders. It’s the perfect tool to keep a smooth reading experience even in the darkest night.</p>
+<p><a href="https://gethivesupport.com/" target="_blank"><strong>Hive Support</strong></a> – Self-Hosted Help Desk, Live Chat & AI Chat Bot Plugin for WordPress</p>
+<p><a href="https://darklup.com/" target="_blank"><strong>Darklup</strong></a> – A smart algorithm-based dark mode plugin for WordPress. Give a modern dark and aesthetic look to your WordPress website. Use plugins developed by WPCommerz,  and go beyond your limits NOW!.</p>
 
 <p>Use plugins developed by WPCommerz, go beyond your limits NOW!</p>
 
 
 <h3>❤️ LOVED WP GUIDANT?</h3>
 <ol>
-	<li>Join our <a href="https://www.facebook.com/wpcommerz" target="_blank">Facebook Group</a></li>
+	<li>Join our <a href="https://www.facebook.com/groups/wpcommerz" target="_blank">Facebook Group</a></li>
 	<li>Learn from our tutorials on <a href="https://www.youtube.com/watch?v=NgyOkDSHHD8&list=PLoyjJ3w9vH9Z_hhmUaahZjAyBXL4TmGYr" target="_blank">Youtube Channel</a></li>
-	<li>Or rate WP GUIDANT on <a href="https://wordpress.org/support/plugin/guidant/reviews/" target="_blank">WordPress</a></li>
+	<li>Rate WP GUIDANT on <a href="https://wordpress.org/support/plugin/guidant/reviews/" target="_blank">WordPress</a></li>
 </ol>
 
 
+## Privacy Policy 
+WP Guidant uses [Appsero](https://appsero.com) SDK to collect some telemetry data upon user's confirmation. This helps us to troubleshoot problems faster & make product improvements.
 
+Appsero SDK **does not gather any data by default.** The SDK only starts gathering basic telemetry data **when a user allows it via the admin notice**. We collect the data to ensure a great user experience for all our users. 
+
+Integrating Appsero SDK **DOES NOT IMMEDIATELY** start gathering data, **without confirmation from users in any case.**
+
+Learn more about how [Appsero collects and uses this data](https://appsero.com/privacy-policy/).
 
 
 
@@ -287,6 +335,70 @@ screenshot-13.png
 screenshot-14.png
 
 == Changelog ==
+
+= 1.2.4 =
+
+1. Fixed WordPress 6.8.1 Compatibility issue
+2. Fixed: minor issues.
+
+= 1.2.3 =
+
+1. Fixed WordPress 6.7 Compatibility issue
+
+= 1.2.2 =
+
+1. Fixed result not show issue
+2. Improved: Performance Improved.
+
+= 1.2.1 =
+1. Improved: overall performance with faster result filtration.
+2. Improved: functions for conditional logic to hide multiple filters for a single card.
+3. Improved: functions for adding various conditions values for a single card attribute.
+4. Fixed: minor bugs.
+
+= 1.2.0 =
+1. Fixed: minor bugs.
+
+= 1.1.9 =
+1.Fixed JavaScript bugs.
+2.Fixed Issue with different language WooCommerce product not found.
+3.Fixed null check issue
+
+= 1.1.8 =
+1. Fixed: minor bugs.
+
+= 1.1.7 =
+1. Improved: Performance Improved.
+2. Improved: Changed single filter to hide option to multiple
+3. Improved: Changed single attributes value select to multiple
+4. Fixed: minor bugs.
+
+= 1.1.6 =
+1. Improved: overall performance with faster result filtration.
+2. Improved: functions for conditional logic to hide multiple filters for a single card.
+3. Improved: functions for adding various conditions values for a single card attribute.
+4. Fixed: minor bugs.
+
+= 1.1.5 =
+1. Fixed minor bugs.
+2. Improved: Performance Improved.
+
+= 1.1.4 =
+1. Fixed minor bugs.
+2. Improved: Performance Improved.
+
+= 1.1.3 =
+1. Fixed minor bugs.
+2. Improved: Performance Improved.
+
+= 1.1.2 =
+1. Improved: Performance Improved.
+2. Fixed minor bugs.
+3. Added Appsero
+
+= 1.1.1 =
+1. Improved: Performance Improved.
+2. Fixed minor bugs.
 
 = 1.1.0 =
 1. Added: Card Description feature.
