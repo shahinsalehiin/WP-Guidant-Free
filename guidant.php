@@ -58,6 +58,13 @@ require_once GUIDANT_PATH . 'backend/class-guidant-ajax.php';
 require_once GUIDANT_PATH . 'backend/class-guidant-meta.php';
 require_once GUIDANT_PATH . 'backend/class-guidant-admin.php';
 
+// Ask for review notice (admin only).
+if ( is_admin() ) {
+    require_once GUIDANT_PATH . 'backend/class-guidant-ask-review.php';
+	$guidant_ask_review = new Guidant_Ask_Review();
+	$guidant_ask_review->hooks();
+}
+
 require_once GUIDANT_PATH . 'frontend/class-guidant-ajax.php';
 require_once GUIDANT_PATH . 'frontend/class-guidant-shortcode.php';
 require_once GUIDANT_PATH . 'frontend/class-guidant-frontend.php';
