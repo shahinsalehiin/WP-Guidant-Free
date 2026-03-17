@@ -42,10 +42,10 @@ if (!class_exists('Guidant_Ask_Review')) {
 		 */
 		public function __construct() {
 			$this->current_time = $this->get_current_time();
-			$this->install_date = (int) get_option( 'guidant_install_date', 0 );
+			$this->install_date = (int) get_option( 'guidant_review_install_date', 0 );
 			if ( 0 === $this->install_date ) {
 				$this->install_date = $this->current_time;
-				update_option( 'guidant_install_date', $this->current_time, false );
+				update_option( 'guidant_review_install_date', $this->current_time, false );
 			}
 		}
 	
@@ -136,7 +136,7 @@ if (!class_exists('Guidant_Ask_Review')) {
 				return (int) $review_notice_date;
 			}
 	
-			$delay_days = 30; // remind later after 30 days
+			$delay_days = 40; // remind later after 30 days; First 10 days + from now 30 days
 			if ( ! get_option( 'guidant_review_notice_delayed' ) ) {
 				$delay_days = 10; // show notice after 10 days of this class is instantiated
 			}
@@ -167,27 +167,30 @@ if (!class_exists('Guidant_Ask_Review')) {
 			?>
 			<div id="<?php echo esc_attr( self::NOTICE_ID ); ?>" class="notice notice-info is-dismissible guidant-review-notice">
 				<div class="guidant-review-notice-inner">
-					<p>
-						<?php
-						printf(
-							/* translators: %s: plugin name */
-							esc_html__( "Hi there 👋, Looks like you are using %s.", 'guidant' ),
-							'<strong>' . esc_html( $plugin_name ) . '</strong>'
-						);
-						?>
-					</p>
-					<p>
-						<?php esc_html_e( 'If you enjoy it, a quick review helps us improve the plugin.', 'guidant' ); ?>
-					</p>
-					<p>
-						<a href="<?php echo esc_url( $review_url ); ?>" class="guidant-dismiss-review guidant-review-action guidant-review-out" target="_blank" rel="noopener noreferrer">
-							<strong><?php esc_html_e( 'Leave review', 'guidant' ); ?></strong>
-						</a>
-						<br>
-						<a href="#" class="guidant-dismiss-review guidant-maybe-later-action"><?php esc_html_e( 'Remind later', 'guidant' ); ?></a>
-						<br>
-						<a href="#" class="guidant-dismiss-review guidant-already-reviewed-action"><?php esc_html_e( 'Dismiss', 'guidant' ); ?></a>
-					</p>
+					<div class="guidant-review-notice-icon">
+						<img src="<?php echo esc_url( plugins_url( 'guidant/assets/img/guidant-icon.svg', dirname( __FILE__, 2 ) ) ); ?>" alt="<?php esc_attr_e( 'WP Guidant Logo', 'guidant' ); ?>">
+					</div>
+					<div class="guidant-review-notice-content">
+						<p>
+							<?php
+							printf(
+								/* translators: %s: plugin name */
+								esc_html__( "Hi there 👋, Looks like you are using %s.", 'guidant' ),
+								'<strong>' . esc_html( $plugin_name ) . '</strong>'
+							);
+							?>
+						</p>
+						<p>
+							<?php esc_html_e( 'If you enjoy it, a quick review helps us improve the plugin.', 'guidant' ); ?>
+						</p>
+						<div class="guidant-review-notice-actions">
+							<a href="<?php echo esc_url( $review_url ); ?>" class="guidant-dismiss-review guidant-review-action guidant-review-out" target="_blank" rel="noopener noreferrer">
+								<strong><?php esc_html_e( 'Leave review', 'guidant' ); ?></strong>
+							</a>
+							<a href="#" class="guidant-dismiss-review guidant-maybe-later-action"><?php esc_html_e( 'Remind later', 'guidant' ); ?></a>
+							<a href="#" class="guidant-dismiss-review guidant-already-reviewed-action"><?php esc_html_e( 'Dismiss', 'guidant' ); ?></a>
+						</div>
+					</div>
 				</div>
 			</div>
 			<?php
@@ -250,11 +253,50 @@ if (!class_exists('Guidant_Ask_Review')) {
 			</script>
 			<style>
 				#<?php echo esc_attr( self::NOTICE_ID ); ?>.guidant-review-notice {
-					border-left-color: #de5819;
-					padding: 12px 20px;
+					border-left-width: 8px;
+					border-left-color: #FD723B;
+					padding: 30px;
+				}
+				.guidant-review-notice-inner {
+					display: flex;
+					gap: 20px;
+				}
+				.guidant-review-notice-icon {
+					background: #fd723b;
+					padding: 10px;
+					border-radius: 50%;
+					height: 40px;
+					width: 40px;
+				}
+				.guidant-review-notice-icon img {
+					width: 100%;
 				}
 				.guidant-review-notice-inner a {
 					color: #de5819;
+				}
+				.guidant-review-notice-inner p {
+					font-size: 18px;
+					margin-top: 0;
+				}
+				.guidant-review-notice-actions {
+					display: flex;
+					gap: 20px;
+				}
+				.guidant-review-notice-actions a {
+					font-size: 18px;
+					text-decoration: none;
+					color: #444444;
+					border-bottom: 2px solid #666666;
+				}
+				.guidant-review-notice-actions a:hover {
+					color: #DE5819;
+					border-bottom-color: #DE5819;
+				}
+				.guidant-review-notice .notice-dismiss:before {
+					border: 2px solid #666666;
+					padding: 4px;
+					border-radius: 100%;
+					content: "\f335" !important;
 				}
 			</style>
 			<?php
