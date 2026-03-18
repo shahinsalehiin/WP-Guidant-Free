@@ -136,7 +136,7 @@ if (!class_exists('Guidant_Ask_Review')) {
 				return (int) $review_notice_date;
 			}
 	
-			$delay_days = 40; // remind later after 30 days; First 10 days + from now 30 days
+			$delay_days = 30; // remind later after 30 days;
 			if ( ! get_option( 'guidant_review_notice_delayed' ) ) {
 				$delay_days = 10; // show notice after 10 days of this class is instantiated
 			}
@@ -175,20 +175,20 @@ if (!class_exists('Guidant_Ask_Review')) {
 							<?php
 							printf(
 								/* translators: %s: plugin name */
-								esc_html__( "Hi there 👋, Looks like you are using %s.", 'guidant' ),
+								esc_html__( "Thanks for using %s.", 'guidant' ),
 								'<strong>' . esc_html( $plugin_name ) . '</strong>'
 							);
 							?>
 						</p>
 						<p>
-							<?php esc_html_e( 'If you enjoy it, a quick review helps us improve the plugin.', 'guidant' ); ?>
+							<?php esc_html_e( 'If you are finding it useful, please consider leaving a quick review. It really helps us improve and continue supporting the plugin.', 'guidant' ); ?>
 						</p>
 						<div class="guidant-review-notice-actions">
 							<a href="<?php echo esc_url( $review_url ); ?>" class="guidant-dismiss-review guidant-review-action guidant-review-out" target="_blank" rel="noopener noreferrer">
-								<strong><?php esc_html_e( 'Leave review', 'guidant' ); ?></strong>
+								<strong><?php esc_html_e( 'Leave a review', 'guidant' ); ?></strong>
 							</a>
-							<a href="#" class="guidant-dismiss-review guidant-maybe-later-action"><?php esc_html_e( 'Remind later', 'guidant' ); ?></a>
-							<a href="#" class="guidant-dismiss-review guidant-already-reviewed-action"><?php esc_html_e( 'Dismiss', 'guidant' ); ?></a>
+							<a href="#" class="guidant-dismiss-review guidant-maybe-later-action"><?php esc_html_e( 'Remind me later', 'guidant' ); ?></a>
+							<a href="#" class="guidant-dismiss-review guidant-already-reviewed-action"><?php esc_html_e( 'I already reviewed', 'guidant' ); ?></a>
 						</div>
 					</div>
 				</div>
