@@ -3,7 +3,7 @@
  * Plugin Name:       WP Guidant
  * Plugin URI:        https://wpcommerz.com/guidant/
  * Description:       Build Multi-step Guided Selling Process & Smart Forms to Convert 10X More Traffic Into Leads & New Customers.
- * Version:           1.2.6
+ * Version:           1.2.7
  * Author:            WPCommerz
  * Author URI:        https://wpcommerz.com/
  * License:           GPL-2.0+
@@ -18,7 +18,7 @@ if ( ! defined( 'WPINC' ) ) {
     die;
 }
 
-define( 'GUIDANT_VERSION', '1.2.6' );
+define( 'GUIDANT_VERSION', '1.2.7' );
 defined( 'GUIDANT_PATH' ) or define( 'GUIDANT_PATH', plugin_dir_path( __FILE__ ) );
 defined( 'GUIDANT_URL' ) or define( 'GUIDANT_URL', plugin_dir_url( __FILE__ ) );
 defined( 'GUIDANT_BASE_PATH' ) or define( 'GUIDANT_BASE_PATH', plugin_basename(__FILE__) );
@@ -57,6 +57,13 @@ require_once GUIDANT_PATH . 'includes/GuidantRenderer.php';
 require_once GUIDANT_PATH . 'backend/class-guidant-ajax.php';
 require_once GUIDANT_PATH . 'backend/class-guidant-meta.php';
 require_once GUIDANT_PATH . 'backend/class-guidant-admin.php';
+
+// Ask for review notice (admin only).
+if ( is_admin() ) {
+    require_once GUIDANT_PATH . 'backend/class-guidant-ask-review.php';
+	$guidant_ask_review = new Guidant_Ask_Review();
+	$guidant_ask_review->hooks();
+}
 
 require_once GUIDANT_PATH . 'frontend/class-guidant-ajax.php';
 require_once GUIDANT_PATH . 'frontend/class-guidant-shortcode.php';

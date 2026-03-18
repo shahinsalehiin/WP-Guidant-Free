@@ -5,7 +5,7 @@ Tags: product recommendation, quiz builder, guided selling, guide plugin, produc
 Requires PHP: 7.4
 Requires at least: 6.5
 Tested up to: 6.9
-Stable tag: 1.2.5
+Stable tag: 1.2.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -336,10 +336,14 @@ screenshot-14.png
 
 == Changelog ==
 
+= 1.2.7 =
+
+1. Fixed: Export/Import condition issues.
+2. Improved: Performance enhancements.
+
 = 1.2.6 =
 
 1. Added: 6.9 Compatibility
-
 
 = 1.2.5 =
 
